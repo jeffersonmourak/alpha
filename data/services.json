@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Service 1",
+        "id": 0,
+        "background": "/static/image.jpg",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer purus odio, maximus ut ligula ut, bibendum lobortis odio. Pellentesque non tempus ante. Integer vel est id tortor porttitor interdum. Nulla quis ultricies orci. Quisque rhoncus velit quis ante pellentesque tempus quis vitae risus. Cras elit ipsum, tincidunt quis augue sit amet, condimentum egestas nisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed vitae molestie."
+    },
+    {
+        "name": "Service 2",
+        "id": 1,
+        "background": "/static/image.jpg",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer purus odio, maximus ut ligula ut, bibendum lobortis odio. Pellentesque non tempus ante. Integer vel est id tortor porttitor interdum. Nulla quis ultricies orci. Quisque rhoncus velit quis ante pellentesque tempus quis vitae risus. Cras elit ipsum, tincidunt quis augue sit amet, condimentum egestas nisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed vitae molestie."
+    },
+    {
+        "name": "Service 3",
+        "id": 2,
+        "background": "/static/image.jpg",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer purus odio, maximus ut ligula ut, bibendum lobortis odio. Pellentesque non tempus ante. Integer vel est id tortor porttitor interdum. Nulla quis ultricies orci. Quisque rhoncus velit quis ante pellentesque tempus quis vitae risus. Cras elit ipsum, tincidunt quis augue sit amet, condimentum egestas nisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed vitae molestie."
+    },
+    {
+        "name": "Service 4",
+        "id": 3,
+        "background": "/static/image.jpg",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer purus odio, maximus ut ligula ut, bibendum lobortis odio. Pellentesque non tempus ante. Integer vel est id tortor porttitor interdum. Nulla quis ultricies orci. Quisque rhoncus velit quis ante pellentesque tempus quis vitae risus. Cras elit ipsum, tincidunt quis augue sit amet, condimentum egestas nisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed vitae molestie."
+    },
+    {
+        "name": "Service 5",
+        "id": 4,
+        "background": "/static/image.jpg",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer purus odio, maximus ut ligula ut, bibendum lobortis odio. Pellentesque non tempus ante. Integer vel est id tortor porttitor interdum. Nulla quis ultricies orci. Quisque rhoncus velit quis ante pellentesque tempus quis vitae risus. Cras elit ipsum, tincidunt quis augue sit amet, condimentum egestas nisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed vitae molestie."
+    },
+    {
+        "name": "Service 6",
+        "id": 5,
+        "background": "/static/image.jpg",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer purus odio, maximus ut ligula ut, bibendum lobortis odio. Pellentesque non tempus ante. Integer vel est id tortor porttitor interdum. Nulla quis ultricies orci. Quisque rhoncus velit quis ante pellentesque tempus quis vitae risus. Cras elit ipsum, tincidunt quis augue sit amet, condimentum egestas nisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed vitae molestie."
+    },
+    {
+        "name": "Service 7",
+        "id": 6,
+        "background": "/static/image.jpg",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer purus odio, maximus ut ligula ut, bibendum lobortis odio. Pellentesque non tempus ante. Integer vel est id tortor porttitor interdum. Nulla quis ultricies orci. Quisque rhoncus velit quis ante pellentesque tempus quis vitae risus. Cras elit ipsum, tincidunt quis augue sit amet, condimentum egestas nisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed vitae molestie."
+    },
+    {
+        "name": "Service 8",
+        "id": 7,
+        "background": "/static/image.jpg",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer purus odio, maximus ut ligula ut, bibendum lobortis odio. Pellentesque non tempus ante. Integer vel est id tortor porttitor interdum. Nulla quis ultricies orci. Quisque rhoncus velit quis ante pellentesque tempus quis vitae risus. Cras elit ipsum, tincidunt quis augue sit amet, condimentum egestas nisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed vitae molestie."
+    }
+]

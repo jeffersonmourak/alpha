@@ -1,0 +1,1 @@
+{"ast":null,"code":"/**\n * Key generator.\n */\nvar key = function key() {\n  return Math.random().toString(36).substr(3);\n};\n\nexport default key;","map":null,"metadata":{},"sourceType":"module"}
