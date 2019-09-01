@@ -1,1 +1,0 @@
-{"ast":null,"code":"var __jsx = React.createElement;\nimport React from 'react';\n/**\n * If component.\n */\n\nvar If = function If(_ref) {\n  var children = _ref.children,\n      condition = _ref.condition;\n  return __jsx(React.Fragment, null, condition ? children : null);\n};\n\nexport default If;","map":null,"metadata":{},"sourceType":"module"}

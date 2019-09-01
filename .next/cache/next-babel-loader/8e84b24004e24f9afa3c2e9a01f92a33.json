@@ -1,1 +1,0 @@
-{"ast":null,"code":"var COLORS = {\n  blue: '#0d447b',\n  white: '#ffffff',\n  black: '#000000',\n  grey: '#808080'\n};\nexport default COLORS;","map":null,"metadata":{},"sourceType":"module"}
