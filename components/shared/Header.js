@@ -144,7 +144,7 @@ const quickClose = () => {
 const Header = () => (
     <HeaderWrapper>
         <label htmlFor="menu">
-            <Hamburger src="/static/hamburger.svg" />
+            <Hamburger alt="menu" src="/static/hamburger.svg" />
         </label>
 
         <input id="menu" type="checkbox" name="menu" />

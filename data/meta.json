@@ -1,0 +1,18 @@
+[
+    {
+        "content": "Meta description",
+        "name": "description"
+    },
+    {
+        "name": "keywords",
+        "content": "painting, housing"
+    },
+    {
+        "name": "robots",
+        "content": "index, follow"
+    },
+    {
+        "name": "language",
+        "content": "English"
+    }
+]
