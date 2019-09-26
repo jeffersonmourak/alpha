@@ -2,7 +2,7 @@
     {
         "name": "Robert",
         "rating": 5,
-        "text": "My house looks like brand new after the renovation, Alpha has the best professionals on the market.",
+        "text": "My house looks like brand new after the renovation.",
         "location": "Sandwich, MA"
     },
     {
@@ -14,7 +14,7 @@
     {
         "name": "Jonathan",
         "rating": 5,
-        "text": "My Deck is amazing, Alpha did the fastest job and professional job I ever saw.",
+        "text": "My Deck is amazing, Alpha did the fastest job I ever saw.",
         "location": "Falmouth, MA"
     },
     {

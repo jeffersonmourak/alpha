@@ -529,7 +529,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 const Image = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
   displayName: "Main__Image",
   componentId: "g2az5q-0"
-})(["width:100%;height:85vh;background-image:url(/static/pictures/cover_1.JPG);background-size:cover;background-position:center center;"]);
+})(["width:100%;height:85vh;background-image:url(/static/pictures/cover_1.jpg);background-size:cover;background-position:center center;"]);
 /**
  * Section component.
  */
@@ -1744,10 +1744,10 @@ module.exports = JSON.parse("[{\"content\":\"Meta description\",\"name\":\"descr
 /*!***************************!*\
   !*** ./data/reviews.json ***!
   \***************************/
-/*! exports provided: 0, 1, 2, 3, 4, 5, 6, 7, default */
+/*! exports provided: 0, 1, 2, 3, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("[{\"name\":\"Abby\",\"rating\":1,\"text\":\"Great work, my house looks amazing now\",\"location\":\"Boston, MA\"},{\"name\":\"Jacoby\",\"rating\":2,\"text\":\"ANOTHER TEXT HERE\",\"location\":\"Other, MA\"},{\"name\":\"Brylee\",\"rating\":3,\"text\":\"ANY OTHER TEXT\",\"location\":\"Hyannis, MA\"},{\"name\":\"Madison\",\"rating\":4,\"text\":\"JUST TO TEST\",\"location\":\"City, MA\"},{\"name\":\"Anna\",\"rating\":5,\"text\":\"Great\",\"location\":\"somewhere, MA\"},{\"name\":\"Nadya\",\"rating\":4,\"text\":\"Oops.\",\"location\":\"over, MA\"},{\"name\":\"Valery\",\"rating\":3,\"text\":\"NOW\",\"location\":\"the, MA\"},{\"name\":\"Dru\",\"rating\":2,\"text\":\"Amazing\",\"location\":\"rainbow, MA\"}]");
+module.exports = JSON.parse("[{\"name\":\"Robert\",\"rating\":5,\"text\":\"My house looks like brand new after the renovation.\",\"location\":\"Sandwich, MA\"},{\"name\":\"Bob\",\"rating\":5,\"text\":\"I can't believe how my house is now, thanks Rudy for this amazing job.\",\"location\":\"Osterville, MA\"},{\"name\":\"Jonathan\",\"rating\":5,\"text\":\"My Deck is amazing, Alpha did the fastest job I ever saw.\",\"location\":\"Falmouth, MA\"},{\"name\":\"Paul\",\"rating\":5,\"text\":\"The painting job that Alpha did, is lasting for a long time.\",\"location\":\"Chatham, MA\"}]");
 
 /***/ }),
 
@@ -1905,13 +1905,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_shared_Footer__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/shared/Footer */ "./components/shared/Footer.js");
 /* harmony import */ var _data_meta_json__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../data/meta.json */ "./data/meta.json");
 var _data_meta_json__WEBPACK_IMPORTED_MODULE_11___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../data/meta.json */ "./data/meta.json", 1);
-/* harmony import */ var _data_services_json__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../data/services.json */ "./data/services.json");
-var _data_services_json__WEBPACK_IMPORTED_MODULE_12___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../data/services.json */ "./data/services.json", 1);
-/* harmony import */ var _constants_key__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../constants/key */ "./constants/key.js");
+/* harmony import */ var _constants_key__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../constants/key */ "./constants/key.js");
 var _jsxFileName = "/Users/jeffersonmourak/projects/joana/pages/index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
-
 
 
 
@@ -1936,12 +1933,12 @@ const buildMeta = () => _data_meta_json__WEBPACK_IMPORTED_MODULE_11__.map(({
   name,
   content
 }) => __jsx("meta", {
-  key: Object(_constants_key__WEBPACK_IMPORTED_MODULE_13__["default"])(),
+  key: Object(_constants_key__WEBPACK_IMPORTED_MODULE_12__["default"])(),
   name: name,
   content: content,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 25
+    lineNumber: 24
   },
   __self: undefined
 }));
@@ -1953,13 +1950,13 @@ const buildMeta = () => _data_meta_json__WEBPACK_IMPORTED_MODULE_11__.map(({
 const PageConfig = () => __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 32
+    lineNumber: 31
   },
   __self: undefined
 }, __jsx(next_head__WEBPACK_IMPORTED_MODULE_2___default.a, {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 33
+    lineNumber: 32
   },
   __self: undefined
 }, __jsx("meta", {
@@ -1968,7 +1965,7 @@ const PageConfig = () => __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Frag
   className: "jsx-3826789607",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 34
+    lineNumber: 33
   },
   __self: undefined
 }), __jsx("meta", {
@@ -1976,7 +1973,7 @@ const PageConfig = () => __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Frag
   className: "jsx-3826789607",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 35
+    lineNumber: 34
   },
   __self: undefined
 }), __jsx("meta", {
@@ -1985,7 +1982,7 @@ const PageConfig = () => __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Frag
   className: "jsx-3826789607",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 36
+    lineNumber: 35
   },
   __self: undefined
 }), __jsx("link", {
@@ -1994,20 +1991,20 @@ const PageConfig = () => __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Frag
   className: "jsx-3826789607",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 37
+    lineNumber: 36
   },
   __self: undefined
 }), buildMeta(), __jsx("title", {
   className: "jsx-3826789607",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 39
+    lineNumber: 38
   },
   __self: undefined
 }, " Alpha Custom ")), __jsx(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
   id: "3826789607",
   __self: undefined
-}, "body{margin:0;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9qZWZmZXJzb25tb3VyYWsvcHJvamVjdHMvam9hbmEvcGFnZXMvaW5kZXguanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBMENhLEFBRzhCLFNBQ2IiLCJmaWxlIjoiL1VzZXJzL2plZmZlcnNvbm1vdXJhay9wcm9qZWN0cy9qb2FuYS9wYWdlcy9pbmRleC5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCBmcm9tICdyZWFjdCc7XG5pbXBvcnQgSGVhZCBmcm9tICduZXh0L2hlYWQnO1xuaW1wb3J0IHN0eWxlZCBmcm9tICdzdHlsZWQtY29tcG9uZW50cyc7XG5cbmltcG9ydCBIZWFkZXIgZnJvbSAnLi4vY29tcG9uZW50cy9zaGFyZWQvSGVhZGVyJztcbmltcG9ydCBNYWluIGZyb20gJy4uL2NvbXBvbmVudHMvUGFnZXMvaW5kZXgvTWFpbic7XG5pbXBvcnQgQWJvdXQgZnJvbSAnLi4vY29tcG9uZW50cy9QYWdlcy9pbmRleC9BYm91dCc7XG5pbXBvcnQgU2VydmljZXMgZnJvbSAnLi4vY29tcG9uZW50cy9QYWdlcy9pbmRleC9TZXJ2aWNlcyc7XG5pbXBvcnQgUmV2aWV3cyBmcm9tICcuLi9jb21wb25lbnRzL1BhZ2VzL2luZGV4L1Jldmlld3MnO1xuaW1wb3J0IENvbnRhY3QgZnJvbSAnLi4vY29tcG9uZW50cy9QYWdlcy9pbmRleC9Db250YWN0JztcbmltcG9ydCBGb290ZXIgZnJvbSAnLi4vY29tcG9uZW50cy9zaGFyZWQvRm9vdGVyJztcblxuaW1wb3J0IE1FVEEgZnJvbSAnLi4vZGF0YS9tZXRhLmpzb24nO1xuaW1wb3J0IHNlcnZpY2VzIGZyb20gJy4uL2RhdGEvc2VydmljZXMuanNvbic7XG5pbXBvcnQga2V5IGZyb20gJy4uL2NvbnN0YW50cy9rZXknO1xuXG5jb25zdCBQYWdlID0gc3R5bGVkLmRpdmBcbiAgICBtYXJnaW4tdG9wOiAxMDBweDtcbmA7XG5cbi8qKlxuICogQnVpbGQgbWV0YS5cbiAqL1xuY29uc3QgYnVpbGRNZXRhID0gKCkgPT4gTUVUQS5tYXAoKHsgbmFtZSwgY29udGVudCB9KSA9PiAoXG4gICAgPG1ldGEga2V5PXtrZXkoKX0gbmFtZT17bmFtZX0gY29udGVudD17Y29udGVudH0gLz5cbikpO1xuXG4vKipcbiAqIFBhZ2UgY29uZmlndXJhdGlvbi5cbiAqL1xuY29uc3QgUGFnZUNvbmZpZyA9ICgpID0+IChcbiAgICA8UmVhY3QuRnJhZ21lbnQ+XG4gICAgICAgIDxIZWFkPlxuICAgICAgICAgICAgPG1ldGEgbmFtZT1cInZpZXdwb3J0XCIgY29udGVudD1cIndpZHRoPWRldmljZS13aWR0aCwgaW5pdGlhbC1zY2FsZT0xXCIgLz5cbiAgICAgICAgICAgIDxtZXRhIGNoYXJTZXQ9XCJ1dGYtOFwiIC8+XG4gICAgICAgICAgICA8bWV0YSBodHRwRXF1aXY9XCJDb250ZW50LVR5cGVcIiBjb250ZW50PVwidGV4dC9odG1sOyBjaGFyc2V0PXV0Zi04XCIgLz5cbiAgICAgICAgICAgIDxsaW5rIHJlbD1cInN0eWxlc2hlZXRcIiBocmVmPVwiaHR0cHM6Ly91c2UudHlwZWtpdC5uZXQveHdzM2J1dC5jc3NcIiAvPlxuICAgICAgICAgICAgeyBidWlsZE1ldGEoKSB9XG4gICAgICAgICAgICA8dGl0bGU+IEFscGhhIEN1c3RvbSA8L3RpdGxlPlxuXG4gICAgICAgIDwvSGVhZD5cbiAgICAgICAgPHN0eWxlIGpzeCBnbG9iYWw+XG4gICAgICAgICAgICB7YFxuICAgICAgICAgICAgICAgIGJvZHkge1xuICAgICAgICAgICAgICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgYH1cbiAgICAgICAgPC9zdHlsZT5cbiAgICA8L1JlYWN0LkZyYWdtZW50PlxuKTtcblxuLyoqXG4gKiBJbmRleCBwYWdlLlxuICovXG5jb25zdCBJbmRleCA9ICgpID0+IChcbiAgICA8UGFnZT5cbiAgICAgICAgPFBhZ2VDb25maWcgLz5cbiAgICAgICAgPEhlYWRlciAvPlxuICAgICAgICA8TWFpbiAvPlxuICAgICAgICA8QWJvdXQgLz5cbiAgICAgICAgPFNlcnZpY2VzIC8+XG4gICAgICAgIDxSZXZpZXdzIC8+XG4gICAgICAgIDxDb250YWN0IC8+XG4gICAgICAgIDxGb290ZXIgLz5cbiAgICA8L1BhZ2U+XG4pO1xuXG5leHBvcnQgZGVmYXVsdCBJbmRleDtcbiJdfQ== */\n/*@ sourceURL=/Users/jeffersonmourak/projects/joana/pages/index.js */"));
+}, "body{margin:0;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9qZWZmZXJzb25tb3VyYWsvcHJvamVjdHMvam9hbmEvcGFnZXMvaW5kZXguanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBeUNhLEFBRzhCLFNBQ2IiLCJmaWxlIjoiL1VzZXJzL2plZmZlcnNvbm1vdXJhay9wcm9qZWN0cy9qb2FuYS9wYWdlcy9pbmRleC5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCBmcm9tICdyZWFjdCc7XG5pbXBvcnQgSGVhZCBmcm9tICduZXh0L2hlYWQnO1xuaW1wb3J0IHN0eWxlZCBmcm9tICdzdHlsZWQtY29tcG9uZW50cyc7XG5cbmltcG9ydCBIZWFkZXIgZnJvbSAnLi4vY29tcG9uZW50cy9zaGFyZWQvSGVhZGVyJztcbmltcG9ydCBNYWluIGZyb20gJy4uL2NvbXBvbmVudHMvUGFnZXMvaW5kZXgvTWFpbic7XG5pbXBvcnQgQWJvdXQgZnJvbSAnLi4vY29tcG9uZW50cy9QYWdlcy9pbmRleC9BYm91dCc7XG5pbXBvcnQgU2VydmljZXMgZnJvbSAnLi4vY29tcG9uZW50cy9QYWdlcy9pbmRleC9TZXJ2aWNlcyc7XG5pbXBvcnQgUmV2aWV3cyBmcm9tICcuLi9jb21wb25lbnRzL1BhZ2VzL2luZGV4L1Jldmlld3MnO1xuaW1wb3J0IENvbnRhY3QgZnJvbSAnLi4vY29tcG9uZW50cy9QYWdlcy9pbmRleC9Db250YWN0JztcbmltcG9ydCBGb290ZXIgZnJvbSAnLi4vY29tcG9uZW50cy9zaGFyZWQvRm9vdGVyJztcblxuaW1wb3J0IE1FVEEgZnJvbSAnLi4vZGF0YS9tZXRhLmpzb24nO1xuaW1wb3J0IGtleSBmcm9tICcuLi9jb25zdGFudHMva2V5JztcblxuY29uc3QgUGFnZSA9IHN0eWxlZC5kaXZgXG4gICAgbWFyZ2luLXRvcDogMTAwcHg7XG5gO1xuXG4vKipcbiAqIEJ1aWxkIG1ldGEuXG4gKi9cbmNvbnN0IGJ1aWxkTWV0YSA9ICgpID0+IE1FVEEubWFwKCh7IG5hbWUsIGNvbnRlbnQgfSkgPT4gKFxuICAgIDxtZXRhIGtleT17a2V5KCl9IG5hbWU9e25hbWV9IGNvbnRlbnQ9e2NvbnRlbnR9IC8+XG4pKTtcblxuLyoqXG4gKiBQYWdlIGNvbmZpZ3VyYXRpb24uXG4gKi9cbmNvbnN0IFBhZ2VDb25maWcgPSAoKSA9PiAoXG4gICAgPFJlYWN0LkZyYWdtZW50PlxuICAgICAgICA8SGVhZD5cbiAgICAgICAgICAgIDxtZXRhIG5hbWU9XCJ2aWV3cG9ydFwiIGNvbnRlbnQ9XCJ3aWR0aD1kZXZpY2Utd2lkdGgsIGluaXRpYWwtc2NhbGU9MVwiIC8+XG4gICAgICAgICAgICA8bWV0YSBjaGFyU2V0PVwidXRmLThcIiAvPlxuICAgICAgICAgICAgPG1ldGEgaHR0cEVxdWl2PVwiQ29udGVudC1UeXBlXCIgY29udGVudD1cInRleHQvaHRtbDsgY2hhcnNldD11dGYtOFwiIC8+XG4gICAgICAgICAgICA8bGluayByZWw9XCJzdHlsZXNoZWV0XCIgaHJlZj1cImh0dHBzOi8vdXNlLnR5cGVraXQubmV0L3h3czNidXQuY3NzXCIgLz5cbiAgICAgICAgICAgIHsgYnVpbGRNZXRhKCkgfVxuICAgICAgICAgICAgPHRpdGxlPiBBbHBoYSBDdXN0b20gPC90aXRsZT5cblxuICAgICAgICA8L0hlYWQ+XG4gICAgICAgIDxzdHlsZSBqc3ggZ2xvYmFsPlxuICAgICAgICAgICAge2BcbiAgICAgICAgICAgICAgICBib2R5IHtcbiAgICAgICAgICAgICAgICAgICAgbWFyZ2luOiAwO1xuICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgIGB9XG4gICAgICAgIDwvc3R5bGU+XG4gICAgPC9SZWFjdC5GcmFnbWVudD5cbik7XG5cbi8qKlxuICogSW5kZXggcGFnZS5cbiAqL1xuY29uc3QgSW5kZXggPSAoKSA9PiAoXG4gICAgPFBhZ2U+XG4gICAgICAgIDxQYWdlQ29uZmlnIC8+XG4gICAgICAgIDxIZWFkZXIgLz5cbiAgICAgICAgPE1haW4gLz5cbiAgICAgICAgPEFib3V0IC8+XG4gICAgICAgIDxTZXJ2aWNlcyAvPlxuICAgICAgICA8UmV2aWV3cyAvPlxuICAgICAgICA8Q29udGFjdCAvPlxuICAgICAgICA8Rm9vdGVyIC8+XG4gICAgPC9QYWdlPlxuKTtcblxuZXhwb3J0IGRlZmF1bHQgSW5kZXg7XG4iXX0= */\n/*@ sourceURL=/Users/jeffersonmourak/projects/joana/pages/index.js */"));
 /**
  * Index page.
  */
@@ -2016,55 +2013,55 @@ const PageConfig = () => __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Frag
 const Index = () => __jsx(Page, {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 56
+    lineNumber: 55
   },
   __self: undefined
 }, __jsx(PageConfig, {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 57
+    lineNumber: 56
   },
   __self: undefined
 }), __jsx(_components_shared_Header__WEBPACK_IMPORTED_MODULE_4__["default"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 58
+    lineNumber: 57
   },
   __self: undefined
 }), __jsx(_components_Pages_index_Main__WEBPACK_IMPORTED_MODULE_5__["default"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 59
+    lineNumber: 58
   },
   __self: undefined
 }), __jsx(_components_Pages_index_About__WEBPACK_IMPORTED_MODULE_6__["default"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 60
+    lineNumber: 59
   },
   __self: undefined
 }), __jsx(_components_Pages_index_Services__WEBPACK_IMPORTED_MODULE_7__["default"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 61
+    lineNumber: 60
   },
   __self: undefined
 }), __jsx(_components_Pages_index_Reviews__WEBPACK_IMPORTED_MODULE_8__["default"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 62
+    lineNumber: 61
   },
   __self: undefined
 }), __jsx(_components_Pages_index_Contact__WEBPACK_IMPORTED_MODULE_9__["default"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 63
+    lineNumber: 62
   },
   __self: undefined
 }), __jsx(_components_shared_Footer__WEBPACK_IMPORTED_MODULE_10__["default"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 64
+    lineNumber: 63
   },
   __self: undefined
 }));
