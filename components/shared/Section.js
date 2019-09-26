@@ -15,6 +15,7 @@ const SectionWrapper = styled.section`
 const Title = styled.h2`
     font-size: 3.3em;
     text-align: center;
+    margin-top: 0;
 `;
 
 const Boundaries = styled.div`
@@ -29,7 +30,7 @@ const Foreground = styled.div`
 const Background = styled.div`
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 75vh;
     z-index: 0;
 `;
 

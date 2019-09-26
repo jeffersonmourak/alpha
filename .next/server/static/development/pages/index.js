@@ -124,12 +124,14 @@ const Text = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.p.withConf
   componentId: "g92kea-0"
 })(["", ""], Object(_constants_styleBuilder__WEBPACK_IMPORTED_MODULE_3__["default"])({
   defaultStyle: `
-        font-size: 20px;
+        font-size: 25px;
         line-height: 30px;
-        padding: 0 55px;
+        padding: 0 115px;
+        word-spacing: 5px;
     `,
-  mobile: `
+  others: `
         ${_constants_fonts__WEBPACK_IMPORTED_MODULE_4__["default"].bebasRegular}
+        font-size: 20px;
         line-height: 20px;
         padding: 0;
     `
@@ -143,13 +145,13 @@ const AboutSection = () => __jsx(_shared_Section__WEBPACK_IMPORTED_MODULE_2__["d
   title: "About Us",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 25
+    lineNumber: 27
   },
   __self: undefined
 }, __jsx(Text, {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 26
+    lineNumber: 28
   },
   __self: undefined
 }, _data_about_json__WEBPACK_IMPORTED_MODULE_5__.text));
@@ -196,7 +198,7 @@ const Content = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.wit
 })(["", ""], Object(_constants_styleBuilder__WEBPACK_IMPORTED_MODULE_7__["default"])({
   defaultStyle: `
         display: flex;
-        flex-direction: row-reverse;
+        flex-direction: column;
         justify-content: space-between;
         min-height: calc(75vh - 50px);
         align-items: center;
@@ -209,31 +211,43 @@ const Content = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.wit
 const Column = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
   displayName: "Contact__Column",
   componentId: "vtwygz-1"
-})(["", ""], Object(_constants_styleBuilder__WEBPACK_IMPORTED_MODULE_7__["default"])({
-  defaultStyle: `
-        display: flex;
-        flex-direction: column;
-        min-height: 500px;
-        height: calc(75vh - 50px);
-        width: 100%;
-        align-items: center;
-    `,
+})(["display:flex;flex-direction:column;height:calc(", "vh - 50px);width:100%;align-items:center;min-height:", "px;", ""], props => props.height || 75, props => props.minHeight || 0, Object(_constants_styleBuilder__WEBPACK_IMPORTED_MODULE_7__["default"])({
   others: `
         margin-bottom: 20px;
     `
 }));
+const Row = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
+  displayName: "Contact__Row",
+  componentId: "vtwygz-2"
+})(["", ""], Object(_constants_styleBuilder__WEBPACK_IMPORTED_MODULE_7__["default"])({
+  defaultStyle: `
+        display: flex;
+        flex-direction: row-reverse;
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    `,
+  others: `
+        margin-bottom: 20px;
+        flex-direction: column;
+    `
+}));
 const Form = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.form.withConfig({
   displayName: "Contact__Form",
-  componentId: "vtwygz-2"
+  componentId: "vtwygz-3"
 })(["display:flex;flex-direction:column;height:calc(75vh - 50px);width:100%;"]);
 const Pointer = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.button.withConfig({
   displayName: "Contact__Pointer",
-  componentId: "vtwygz-3"
+  componentId: "vtwygz-4"
 })(["border:none;background:transparent;cursor:pointer;width:30px;height:30px;background-image:url(/static/pointer.svg);background-size:cover;"]);
 const Label = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.label.withConfig({
   displayName: "Contact__Label",
-  componentId: "vtwygz-4"
+  componentId: "vtwygz-5"
 })(["display:flex;flex-direction:column;margin-bottom:20px;font-size:22px;&::before{content:'", "';}"], props => props.text);
+const ContactPhone = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.a.withConfig({
+  displayName: "Contact__ContactPhone",
+  componentId: "vtwygz-6"
+})(["color:", ";font-size:35px;", " text-decoration:none;transition:all 300ms ease;&:hover{color:", ";}"], _constants_colors__WEBPACK_IMPORTED_MODULE_5__["default"].blue, _constants_fonts__WEBPACK_IMPORTED_MODULE_6__["default"].bebasBold, _constants_colors__WEBPACK_IMPORTED_MODULE_5__["default"].black);
 const InputStyle = `
     line-height: 45px;
     font-size: 22px;
@@ -243,20 +257,28 @@ const InputStyle = `
 `;
 const Input = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.input.withConfig({
   displayName: "Contact__Input",
-  componentId: "vtwygz-5"
+  componentId: "vtwygz-7"
 })(["", ""], InputStyle);
 const Phone = styled_components__WEBPACK_IMPORTED_MODULE_1___default()(react_input_mask__WEBPACK_IMPORTED_MODULE_3___default.a).withConfig({
   displayName: "Contact__Phone",
-  componentId: "vtwygz-6"
+  componentId: "vtwygz-8"
 })(["", ""], InputStyle);
 const Message = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.textarea.withConfig({
   displayName: "Contact__Message",
-  componentId: "vtwygz-7"
+  componentId: "vtwygz-9"
 })(["", " min-height:100px;"], InputStyle);
 const Send = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.button.withConfig({
   displayName: "Contact__Send",
-  componentId: "vtwygz-8"
+  componentId: "vtwygz-10"
 })(["cursor:pointer;font-size:22px;", " padding:10px 0;color:", ";width:95%;background-color:", ";border:0;transition:all 300ms ease;&:hover,&:focus{background-color:", ";}"], _constants_fonts__WEBPACK_IMPORTED_MODULE_6__["default"].bebasRegular, _constants_colors__WEBPACK_IMPORTED_MODULE_5__["default"].white, _constants_colors__WEBPACK_IMPORTED_MODULE_5__["default"].black, _constants_colors__WEBPACK_IMPORTED_MODULE_5__["default"].grey);
+const CallTitle = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.h3.withConfig({
+  displayName: "Contact__CallTitle",
+  componentId: "vtwygz-11"
+})(["font-size:2.5em;text-align:center;color:", ";"], _constants_colors__WEBPACK_IMPORTED_MODULE_5__["default"].blue);
+const PhoneTitle = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.h4.withConfig({
+  displayName: "Contact__PhoneTitle",
+  componentId: "vtwygz-12"
+})(["font-size:2em;text-align:center;color:", ";"], _constants_colors__WEBPACK_IMPORTED_MODULE_5__["default"].black);
 const CENTER = [41.65842, -70.385323];
 /**
  * Open maps.
@@ -279,19 +301,26 @@ const Contact = () => __jsx(_shared_Section__WEBPACK_IMPORTED_MODULE_4__["defaul
   title: "Contact",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 119
+    lineNumber: 157
   },
   __self: undefined
 }, __jsx(Content, {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 120
+    lineNumber: 158
+  },
+  __self: undefined
+}, __jsx(Row, {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 159
   },
   __self: undefined
 }, __jsx(Column, {
+  minHeight: 500,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 121
+    lineNumber: 160
   },
   __self: undefined
 }, __jsx(google_map_react__WEBPACK_IMPORTED_MODULE_2___default.a, {
@@ -302,7 +331,7 @@ const Contact = () => __jsx(_shared_Section__WEBPACK_IMPORTED_MODULE_4__["defaul
   defaultZoom: 15,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 122
+    lineNumber: 161
   },
   __self: undefined
 }, __jsx(Pointer, {
@@ -311,21 +340,22 @@ const Contact = () => __jsx(_shared_Section__WEBPACK_IMPORTED_MODULE_4__["defaul
   lng: -70.3855421,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 127
+    lineNumber: 166
   },
   __self: undefined
 }))), __jsx(Column, {
+  minHeight: 500,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 134
+    lineNumber: 173
   },
   __self: undefined
 }, __jsx(Form, {
-  action: "https://formspree.io/jeffersonmourak@gmail.com",
+  action: "https://formspree.io/alphacustom@icloud.com",
   method: "POST",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 135
+    lineNumber: 174
   },
   __self: undefined
 }, __jsx("input", {
@@ -334,7 +364,7 @@ const Contact = () => __jsx(_shared_Section__WEBPACK_IMPORTED_MODULE_4__["defaul
   value: "Contact from website",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 136
+    lineNumber: 175
   },
   __self: undefined
 }), __jsx(Label, {
@@ -342,7 +372,7 @@ const Contact = () => __jsx(_shared_Section__WEBPACK_IMPORTED_MODULE_4__["defaul
   text: "Full name",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 137
+    lineNumber: 176
   },
   __self: undefined
 }, __jsx(Input, {
@@ -351,7 +381,7 @@ const Contact = () => __jsx(_shared_Section__WEBPACK_IMPORTED_MODULE_4__["defaul
   name: "name",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 138
+    lineNumber: 177
   },
   __self: undefined
 })), __jsx(Label, {
@@ -359,7 +389,7 @@ const Contact = () => __jsx(_shared_Section__WEBPACK_IMPORTED_MODULE_4__["defaul
   text: "Phone",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 140
+    lineNumber: 179
   },
   __self: undefined
 }, __jsx(Phone, {
@@ -370,7 +400,7 @@ const Contact = () => __jsx(_shared_Section__WEBPACK_IMPORTED_MODULE_4__["defaul
   name: "phone",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 141
+    lineNumber: 180
   },
   __self: undefined
 })), __jsx(Label, {
@@ -378,7 +408,7 @@ const Contact = () => __jsx(_shared_Section__WEBPACK_IMPORTED_MODULE_4__["defaul
   text: "Email",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 143
+    lineNumber: 182
   },
   __self: undefined
 }, __jsx(Input, {
@@ -387,7 +417,7 @@ const Contact = () => __jsx(_shared_Section__WEBPACK_IMPORTED_MODULE_4__["defaul
   name: "email",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 144
+    lineNumber: 183
   },
   __self: undefined
 })), __jsx(Label, {
@@ -395,7 +425,7 @@ const Contact = () => __jsx(_shared_Section__WEBPACK_IMPORTED_MODULE_4__["defaul
   text: "Message",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 146
+    lineNumber: 185
   },
   __self: undefined
 }, __jsx(Message, {
@@ -403,17 +433,75 @@ const Contact = () => __jsx(_shared_Section__WEBPACK_IMPORTED_MODULE_4__["defaul
   name: "message",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 147
+    lineNumber: 186
   },
   __self: undefined
 })), __jsx(Send, {
   type: "submit",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 150
+    lineNumber: 189
   },
   __self: undefined
-}, " Send ")))));
+}, " Send ")))), __jsx(Row, {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 193
+  },
+  __self: undefined
+}, __jsx(CallTitle, {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 194
+  },
+  __self: undefined
+}, " Call us ")), __jsx(Row, {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 196
+  },
+  __self: undefined
+}, __jsx(Column, {
+  height: 40,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 197
+  },
+  __self: undefined
+}, __jsx(PhoneTitle, {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 198
+  },
+  __self: undefined
+}, " Cleaning division "), __jsx(ContactPhone, {
+  href: "tel:508-360-0316",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 199
+  },
+  __self: undefined
+}, "508-360-0316")), __jsx(Column, {
+  height: 40,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 201
+  },
+  __self: undefined
+}, __jsx(PhoneTitle, {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 202
+  },
+  __self: undefined
+}, " Construction division "), __jsx(ContactPhone, {
+  href: "tel:508-360-5357",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 203
+  },
+  __self: undefined
+}, "508-360-5357")))));
 
 /* harmony default export */ __webpack_exports__["default"] = (Contact);
 
@@ -441,7 +529,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 const Image = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
   displayName: "Main__Image",
   componentId: "g2az5q-0"
-})(["width:100%;height:75vh;background-image:url(/static/image.jpg);background-size:cover;background-position:center center;"]);
+})(["width:100%;height:85vh;background-image:url(/static/pictures/cover_1.JPG);background-size:cover;background-position:center center;"]);
 /**
  * Section component.
  */
@@ -599,6 +687,7 @@ const Arrow = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.button.wi
             background-image: url(/static/arrow.svg);
             position: absolute;
             top: 15vh;
+            background-repeat: no-repeat;
         `,
   others: `
             width: 32px;
@@ -652,7 +741,7 @@ class Services extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       key: Object(_constants_key__WEBPACK_IMPORTED_MODULE_5__["default"])(),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 165
+        lineNumber: 166
       },
       __self: this
     }));
@@ -675,7 +764,7 @@ class Services extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       onClick: () => this.onSelectReview(index),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 175
+        lineNumber: 176
       },
       __self: this
     }, name));
@@ -715,44 +804,44 @@ class Services extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       title: "Reviews",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 210
+        lineNumber: 211
       },
       __self: this
     }, __jsx(Content, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 211
+        lineNumber: 212
       },
       __self: this
     }, __jsx(Text, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 212
+        lineNumber: 213
       },
       __self: this
     }, __jsx("strong", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 213
+        lineNumber: 214
       },
       __self: this
     }, text), `${name} - ${location}`), __jsx(Stars, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 217
+        lineNumber: 218
       },
       __self: this
     }, this.getRating(rating)), __jsx(ReviewList, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 221
+        lineNumber: 222
       },
       __self: this
     }, this.listServices()), __jsx(Arrow, {
       onClick: () => this.stepReview(-1),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 225
+        lineNumber: 226
       },
       __self: this
     }), __jsx(Arrow, {
@@ -760,7 +849,7 @@ class Services extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       direction: "forward",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 226
+        lineNumber: 227
       },
       __self: this
     })));
@@ -826,7 +915,7 @@ const Text = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.p.withConf
 const Image = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
   displayName: "Services__Image",
   componentId: "e7qt1o-1"
-})(["width:100%;min-height:calc(100% - 100px);background-image:url(", ");background-size:cover;margin-top:100px;background-position:center center;"], props => props.src);
+})(["width:100%;min-height:calc(100% - 100px);height:75vh;background-image:url(", ");background-size:cover;margin-top:100px;background-position:center center;"], props => props.src);
 const ServiceItem = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.button.withConfig({
   displayName: "Services__ServiceItem",
   componentId: "e7qt1o-2"
@@ -843,7 +932,7 @@ const ServiceItem = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.but
 
         &:focus {
             outline: 0;
-            color: ${_constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"].black}
+            color: ${_constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"].grey}
         }
 
         &:disabled {
@@ -854,7 +943,9 @@ const ServiceItem = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.but
         }
     `,
   others: `
-        display: none;
+        &:not(.compare) {
+            display: none;
+        }
         
         &:disabled {
             display: block;
@@ -888,6 +979,7 @@ const Arrow = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.button.wi
             background-image: url(/static/arrow-white.svg);
             position: absolute;
             top: 50vh;
+            background-repeat: no-repeat;
         `,
   others: `
             width: 32px;
@@ -906,7 +998,8 @@ class Services extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
     super(props);
     this.state = {
       current: 0,
-      services: _data_services_json__WEBPACK_IMPORTED_MODULE_8__
+      services: _data_services_json__WEBPACK_IMPORTED_MODULE_8__,
+      isBefore: true
     };
   }
   /**
@@ -916,7 +1009,18 @@ class Services extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
 
   onSelectService(current) {
     this.setState(state => Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, state, {
-      current
+      current,
+      isBefore: true
+    }));
+  }
+  /**
+   * On Select before.
+   */
+
+
+  onSelectBefore(isBefore) {
+    this.setState(state => Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, state, {
+      isBefore
     }));
   }
   /**
@@ -927,9 +1031,20 @@ class Services extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
   getCurrent() {
     const {
       services,
-      current
+      current,
+      isBefore
     } = this.state;
-    return services[current];
+    const activeService = services[current];
+    let background = isBefore ? activeService.before : activeService.after;
+
+    if (activeService.hideCompare) {
+      // eslint-disable-next-line prefer-destructuring
+      background = activeService.background;
+    }
+
+    return Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, activeService, {
+      background
+    });
   }
   /**
    * Step review.
@@ -967,10 +1082,49 @@ class Services extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       onClick: () => this.onSelectService(index),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 170
+        lineNumber: 197
       },
       __self: this
     }, name));
+  }
+  /**
+   * Compare options.
+   */
+
+
+  compareOptions() {
+    const {
+      services,
+      current,
+      isBefore
+    } = this.state;
+    const activeService = services[current];
+
+    const before = __jsx(ServiceItem, {
+      key: Object(_constants_key__WEBPACK_IMPORTED_MODULE_6__["default"])(),
+      className: "compare",
+      disabled: isBefore,
+      onClick: () => this.onSelectBefore(true),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 215
+      },
+      __self: this
+    }, "Before");
+
+    const after = __jsx(ServiceItem, {
+      key: Object(_constants_key__WEBPACK_IMPORTED_MODULE_6__["default"])(),
+      className: "compare",
+      disabled: !isBefore,
+      onClick: () => this.onSelectBefore(false),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 226
+      },
+      __self: this
+    }, "After");
+
+    return activeService.hideCompare ? [] : [before, after];
   }
   /**
    * Render.
@@ -988,39 +1142,45 @@ class Services extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
         src: background,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 186
+          lineNumber: 245
         },
         __self: this
       }),
       title: "Services",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 186
+        lineNumber: 245
       },
       __self: this
     }, __jsx(Content, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 187
+        lineNumber: 246
       },
       __self: this
     }, __jsx(Text, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 188
+        lineNumber: 247
       },
       __self: this
     }, text), __jsx(ServiceList, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 192
+        lineNumber: 251
+      },
+      __self: this
+    }, this.compareOptions()), __jsx(ServiceList, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 255
       },
       __self: this
     }, this.listServices()), __jsx(Arrow, {
       onClick: () => this.stepService(-1),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 195
+        lineNumber: 258
       },
       __self: this
     }), __jsx(Arrow, {
@@ -1028,7 +1188,7 @@ class Services extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       direction: "forward",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 196
+        lineNumber: 259
       },
       __self: this
     })));
@@ -1136,30 +1296,9 @@ const Logo = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.img.withCo
   displayName: "Header__Logo",
   componentId: "ff08l-2"
 })(["height:65%;margin:0 20px;"]);
-const Phone = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.a.withConfig({
-  displayName: "Header__Phone",
-  componentId: "ff08l-3"
-})(["", ""], Object(_constants_styleBuilder__WEBPACK_IMPORTED_MODULE_4__["default"])({
-  defaultStyle: `
-        color: ${_constants_colors__WEBPACK_IMPORTED_MODULE_2__["default"].blue};
-        font-size: 35px;
-        ${_constants_fonts__WEBPACK_IMPORTED_MODULE_3__["default"].bebasBold}
-        position: absolute;
-        right: 50px;
-        text-decoration: none;
-        transition: all 300ms ease;
-
-        &:hover {
-            color: ${_constants_colors__WEBPACK_IMPORTED_MODULE_2__["default"].black};
-        }
-    `,
-  others: `
-        display: none;
-    `
-}));
 const Nav = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.nav.withConfig({
   displayName: "Header__Nav",
-  componentId: "ff08l-4"
+  componentId: "ff08l-3"
 })(["", ""], Object(_constants_styleBuilder__WEBPACK_IMPORTED_MODULE_4__["default"])({
   defaultStyle: 'display: none;',
   others: `
@@ -1184,11 +1323,11 @@ const Nav = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.nav.withCon
 }));
 const NavItem = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.a.withConfig({
   displayName: "Header__NavItem",
-  componentId: "ff08l-5"
+  componentId: "ff08l-4"
 })(["color:", ";font-size:35px;", " margin:0 20px;text-decoration:none;transition:all 300ms ease;&:hover{color:", ";}"], _constants_colors__WEBPACK_IMPORTED_MODULE_2__["default"].blue, _constants_fonts__WEBPACK_IMPORTED_MODULE_3__["default"].bebasBold, _constants_colors__WEBPACK_IMPORTED_MODULE_2__["default"].black);
 const Hamburger = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.img.withConfig({
   displayName: "Header__Hamburger",
-  componentId: "ff08l-6"
+  componentId: "ff08l-5"
 })(["", ""], Object(_constants_styleBuilder__WEBPACK_IMPORTED_MODULE_4__["default"])({
   defaultStyle: 'display: none;',
   others: `
@@ -1199,23 +1338,6 @@ const Hamburger = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.img.w
         z-index: 4;
         top: 30px;
         left: 20px;
-    `
-}));
-const MobilePhone = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.a.withConfig({
-  displayName: "Header__MobilePhone",
-  componentId: "ff08l-7"
-})(["", ""], Object(_constants_styleBuilder__WEBPACK_IMPORTED_MODULE_4__["default"])({
-  defaultStyle: 'display: none;',
-  others: `
-        display: block;
-        width: 55px;
-        height: 55px;
-        position: fixed;
-        z-index: 2;
-        top: 25px;
-        right: 20px;
-        background-image: url(/static/phone.svg);
-        background-size: cover;
     `
 }));
 /**
@@ -1234,14 +1356,14 @@ const quickClose = () => {
 const Header = () => __jsx(HeaderWrapper, {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 145
+    lineNumber: 111
   },
   __self: undefined
 }, __jsx("label", {
   htmlFor: "menu",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 146
+    lineNumber: 112
   },
   __self: undefined
 }, __jsx(Hamburger, {
@@ -1249,7 +1371,7 @@ const Header = () => __jsx(HeaderWrapper, {
   src: "/static/hamburger.svg",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 147
+    lineNumber: 113
   },
   __self: undefined
 })), __jsx("input", {
@@ -1258,13 +1380,13 @@ const Header = () => __jsx(HeaderWrapper, {
   name: "menu",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 150
+    lineNumber: 116
   },
   __self: undefined
 }), __jsx(Nav, {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 151
+    lineNumber: 117
   },
   __self: undefined
 }, __jsx(NavItem, {
@@ -1272,7 +1394,7 @@ const Header = () => __jsx(HeaderWrapper, {
   href: "#services",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 152
+    lineNumber: 118
   },
   __self: undefined
 }, "Services"), __jsx(NavItem, {
@@ -1280,7 +1402,7 @@ const Header = () => __jsx(HeaderWrapper, {
   href: "#reviews",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 153
+    lineNumber: 119
   },
   __self: undefined
 }, "Reviews"), __jsx(NavItem, {
@@ -1288,7 +1410,7 @@ const Header = () => __jsx(HeaderWrapper, {
   href: "#about-us",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 154
+    lineNumber: 120
   },
   __self: undefined
 }, "About us"), __jsx(NavItem, {
@@ -1296,21 +1418,21 @@ const Header = () => __jsx(HeaderWrapper, {
   href: "#contact",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 155
+    lineNumber: 121
   },
   __self: undefined
 }, "Contact")), __jsx(Anchor, {
   href: "#services",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 157
+    lineNumber: 123
   },
   __self: undefined
 }, "Services"), __jsx(Anchor, {
   href: "#reviews",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 158
+    lineNumber: 124
   },
   __self: undefined
 }, "Reviews"), __jsx(Logo, {
@@ -1318,38 +1440,24 @@ const Header = () => __jsx(HeaderWrapper, {
   src: "/static/logo.svg",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 159
+    lineNumber: 125
   },
   __self: undefined
 }), __jsx(Anchor, {
   href: "#about-us",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 160
+    lineNumber: 126
   },
   __self: undefined
 }, "About us"), __jsx(Anchor, {
   href: "#contact",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 161
+    lineNumber: 127
   },
   __self: undefined
-}, "Contact"), __jsx(Phone, {
-  href: "tel:508-360-5657",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 163
-  },
-  __self: undefined
-}, "508-360-5657"), __jsx(MobilePhone, {
-  href: "tel:508-360-5657",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 164
-  },
-  __self: undefined
-}));
+}, "Contact"));
 
 /* harmony default export */ __webpack_exports__["default"] = (Header);
 
@@ -1418,7 +1526,7 @@ const SectionWrapper = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.
 const Title = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.h2.withConfig({
   displayName: "Section__Title",
   componentId: "sc-1cix69p-1"
-})(["font-size:3.3em;text-align:center;"]);
+})(["font-size:3.3em;text-align:center;margin-top:0;"]);
 const Boundaries = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
   displayName: "Section__Boundaries",
   componentId: "sc-1cix69p-2"
@@ -1430,7 +1538,7 @@ const Foreground = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.
 const Background = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
   displayName: "Section__Background",
   componentId: "sc-1cix69p-4"
-})(["position:absolute;width:100%;height:100%;z-index:0;"]);
+})(["position:absolute;width:100%;height:75vh;z-index:0;"]);
 /**
  * Section component.
  */
@@ -1444,52 +1552,52 @@ const Section = ({
   id: id,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 45
+    lineNumber: 46
   },
   __self: undefined
 }, __jsx(_If__WEBPACK_IMPORTED_MODULE_4__["default"], {
   condition: react__WEBPACK_IMPORTED_MODULE_0___default.a.isValidElement(background),
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 46
+    lineNumber: 47
   },
   __self: undefined
 }, __jsx(Background, {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 47
+    lineNumber: 48
   },
   __self: undefined
 }, background)), __jsx(Foreground, {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 51
+    lineNumber: 52
   },
   __self: undefined
 }, __jsx(_If__WEBPACK_IMPORTED_MODULE_4__["default"], {
   condition: title,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 52
+    lineNumber: 53
   },
   __self: undefined
 }, __jsx(Title, {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 53
+    lineNumber: 54
   },
   __self: undefined
 }, title)), __jsx(_If__WEBPACK_IMPORTED_MODULE_4__["default"], {
   condition: react__WEBPACK_IMPORTED_MODULE_0___default.a.isValidElement(children),
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 56
+    lineNumber: 57
   },
   __self: undefined
 }, __jsx(Boundaries, {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 57
+    lineNumber: 58
   },
   __self: undefined
 }, children))));
@@ -1617,7 +1725,7 @@ const styleBuilder = ({
 /*! exports provided: text, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"text\":\"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.\\nLorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ulla\"}");
+module.exports = JSON.parse("{\"text\":\"Under Rudy Gazolla guidance Alpha custom inc. has grown steadily since opening for over a decade. Rudy and Joanna operate under a simple guideline of striving to provide each individual customer with friendly, reliable, high quality service. While always an active hands on business owner, Rudy and Joanna has also developed a reputation as an industry expert.\"}");
 
 /***/ }),
 
@@ -1647,10 +1755,10 @@ module.exports = JSON.parse("[{\"name\":\"Abby\",\"rating\":1,\"text\":\"Great w
 /*!****************************!*\
   !*** ./data/services.json ***!
   \****************************/
-/*! exports provided: 0, 1, 2, 3, 4, 5, 6, 7, default */
+/*! exports provided: 0, 1, 2, 3, 4, 5, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("[{\"name\":\"Service 1\",\"id\":0,\"background\":\"/static/image.jpg\",\"text\":\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer purus odio, maximus ut ligula ut, bibendum lobortis odio. Pellentesque non tempus ante. Integer vel est id tortor porttitor interdum. Nulla quis ultricies orci. Quisque rhoncus velit quis ante pellentesque tempus quis vitae risus. Cras elit ipsum, tincidunt quis augue sit amet, condimentum egestas nisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed vitae molestie.\"},{\"name\":\"Service 2\",\"id\":1,\"background\":\"/static/image.jpg\",\"text\":\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer purus odio, maximus ut ligula ut, bibendum lobortis odio. Pellentesque non tempus ante. Integer vel est id tortor porttitor interdum. Nulla quis ultricies orci. Quisque rhoncus velit quis ante pellentesque tempus quis vitae risus. Cras elit ipsum, tincidunt quis augue sit amet, condimentum egestas nisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed vitae molestie.\"},{\"name\":\"Service 3\",\"id\":2,\"background\":\"/static/image.jpg\",\"text\":\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer purus odio, maximus ut ligula ut, bibendum lobortis odio. Pellentesque non tempus ante. Integer vel est id tortor porttitor interdum. Nulla quis ultricies orci. Quisque rhoncus velit quis ante pellentesque tempus quis vitae risus. Cras elit ipsum, tincidunt quis augue sit amet, condimentum egestas nisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed vitae molestie.\"},{\"name\":\"Service 4\",\"id\":3,\"background\":\"/static/image.jpg\",\"text\":\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer purus odio, maximus ut ligula ut, bibendum lobortis odio. Pellentesque non tempus ante. Integer vel est id tortor porttitor interdum. Nulla quis ultricies orci. Quisque rhoncus velit quis ante pellentesque tempus quis vitae risus. Cras elit ipsum, tincidunt quis augue sit amet, condimentum egestas nisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed vitae molestie.\"},{\"name\":\"Service 5\",\"id\":4,\"background\":\"/static/image.jpg\",\"text\":\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer purus odio, maximus ut ligula ut, bibendum lobortis odio. Pellentesque non tempus ante. Integer vel est id tortor porttitor interdum. Nulla quis ultricies orci. Quisque rhoncus velit quis ante pellentesque tempus quis vitae risus. Cras elit ipsum, tincidunt quis augue sit amet, condimentum egestas nisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed vitae molestie.\"},{\"name\":\"Service 6\",\"id\":5,\"background\":\"/static/image.jpg\",\"text\":\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer purus odio, maximus ut ligula ut, bibendum lobortis odio. Pellentesque non tempus ante. Integer vel est id tortor porttitor interdum. Nulla quis ultricies orci. Quisque rhoncus velit quis ante pellentesque tempus quis vitae risus. Cras elit ipsum, tincidunt quis augue sit amet, condimentum egestas nisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed vitae molestie.\"},{\"name\":\"Service 7\",\"id\":6,\"background\":\"/static/image.jpg\",\"text\":\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer purus odio, maximus ut ligula ut, bibendum lobortis odio. Pellentesque non tempus ante. Integer vel est id tortor porttitor interdum. Nulla quis ultricies orci. Quisque rhoncus velit quis ante pellentesque tempus quis vitae risus. Cras elit ipsum, tincidunt quis augue sit amet, condimentum egestas nisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed vitae molestie.\"},{\"name\":\"Service 8\",\"id\":7,\"background\":\"/static/image.jpg\",\"text\":\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer purus odio, maximus ut ligula ut, bibendum lobortis odio. Pellentesque non tempus ante. Integer vel est id tortor porttitor interdum. Nulla quis ultricies orci. Quisque rhoncus velit quis ante pellentesque tempus quis vitae risus. Cras elit ipsum, tincidunt quis augue sit amet, condimentum egestas nisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed vitae molestie.\"}]");
+module.exports = JSON.parse("[{\"name\":\"Painting\",\"before\":\"/static/pictures/painting_5_before.jpg\",\"after\":\"/static/pictures/painting_5_after.jpg\",\"text\":\"There’s a reason we’re the most trusted house painter on Cape Cod. We are trained to make your painting dreams come true. When you hire Alpha Custom to paint the interior or exterior of your home we try to make it as painless for you as possible.\"},{\"name\":\"Side wall\",\"before\":\"/static/pictures/side_wall_1_before.jpg\",\"after\":\"/static/pictures/side_wall_1_after.jpg\",\"text\":\"\"},{\"name\":\"Dry wall\",\"background\":\"/static/pictures/dry_wall_1.jpeg\",\"hideCompare\":true,\"text\":\"\"},{\"name\":\"Carpentry\",\"background\":\"/static/pictures/carpentry_11.jpg\",\"hideCompare\":true,\"text\":\"\"},{\"name\":\"Floor\",\"before\":\"/static/pictures/floor_2_before.jpg\",\"after\":\"/static/pictures/floor_2_after.jpg\",\"text\":\"\"},{\"name\":\"Power washing\",\"hideCompare\":true,\"background\":\"/static/pictures/power_wash_4.jpg\",\"text\":\"Power washing is used to clean your house exterior (house washing), deck, outdoor furniture as well as for commercial uses such as concrete cleaning and removing contaminants like mold or mildew that have adhered to  the surface of a building.\"}]");
 
 /***/ }),
 
@@ -1797,10 +1905,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_shared_Footer__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/shared/Footer */ "./components/shared/Footer.js");
 /* harmony import */ var _data_meta_json__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../data/meta.json */ "./data/meta.json");
 var _data_meta_json__WEBPACK_IMPORTED_MODULE_11___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../data/meta.json */ "./data/meta.json", 1);
-/* harmony import */ var _constants_key__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../constants/key */ "./constants/key.js");
+/* harmony import */ var _data_services_json__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../data/services.json */ "./data/services.json");
+var _data_services_json__WEBPACK_IMPORTED_MODULE_12___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../data/services.json */ "./data/services.json", 1);
+/* harmony import */ var _constants_key__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../constants/key */ "./constants/key.js");
 var _jsxFileName = "/Users/jeffersonmourak/projects/joana/pages/index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+
 
 
 
@@ -1825,12 +1936,12 @@ const buildMeta = () => _data_meta_json__WEBPACK_IMPORTED_MODULE_11__.map(({
   name,
   content
 }) => __jsx("meta", {
-  key: Object(_constants_key__WEBPACK_IMPORTED_MODULE_12__["default"])(),
+  key: Object(_constants_key__WEBPACK_IMPORTED_MODULE_13__["default"])(),
   name: name,
   content: content,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 24
+    lineNumber: 25
   },
   __self: undefined
 }));
@@ -1842,13 +1953,13 @@ const buildMeta = () => _data_meta_json__WEBPACK_IMPORTED_MODULE_11__.map(({
 const PageConfig = () => __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 31
+    lineNumber: 32
   },
   __self: undefined
 }, __jsx(next_head__WEBPACK_IMPORTED_MODULE_2___default.a, {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 32
+    lineNumber: 33
   },
   __self: undefined
 }, __jsx("meta", {
@@ -1857,7 +1968,7 @@ const PageConfig = () => __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Frag
   className: "jsx-3826789607",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 33
+    lineNumber: 34
   },
   __self: undefined
 }), __jsx("meta", {
@@ -1865,7 +1976,7 @@ const PageConfig = () => __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Frag
   className: "jsx-3826789607",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 34
+    lineNumber: 35
   },
   __self: undefined
 }), __jsx("meta", {
@@ -1874,7 +1985,7 @@ const PageConfig = () => __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Frag
   className: "jsx-3826789607",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 35
+    lineNumber: 36
   },
   __self: undefined
 }), __jsx("link", {
@@ -1883,20 +1994,20 @@ const PageConfig = () => __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Frag
   className: "jsx-3826789607",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 36
+    lineNumber: 37
   },
   __self: undefined
 }), buildMeta(), __jsx("title", {
   className: "jsx-3826789607",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 38
+    lineNumber: 39
   },
   __self: undefined
 }, " Alpha Custom ")), __jsx(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
   id: "3826789607",
   __self: undefined
-}, "body{margin:0;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9qZWZmZXJzb25tb3VyYWsvcHJvamVjdHMvam9hbmEvcGFnZXMvaW5kZXguanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBeUNhLEFBRzhCLFNBQ2IiLCJmaWxlIjoiL1VzZXJzL2plZmZlcnNvbm1vdXJhay9wcm9qZWN0cy9qb2FuYS9wYWdlcy9pbmRleC5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCBmcm9tICdyZWFjdCc7XG5pbXBvcnQgSGVhZCBmcm9tICduZXh0L2hlYWQnO1xuaW1wb3J0IHN0eWxlZCBmcm9tICdzdHlsZWQtY29tcG9uZW50cyc7XG5cbmltcG9ydCBIZWFkZXIgZnJvbSAnLi4vY29tcG9uZW50cy9zaGFyZWQvSGVhZGVyJztcbmltcG9ydCBNYWluIGZyb20gJy4uL2NvbXBvbmVudHMvUGFnZXMvaW5kZXgvTWFpbic7XG5pbXBvcnQgQWJvdXQgZnJvbSAnLi4vY29tcG9uZW50cy9QYWdlcy9pbmRleC9BYm91dCc7XG5pbXBvcnQgU2VydmljZXMgZnJvbSAnLi4vY29tcG9uZW50cy9QYWdlcy9pbmRleC9TZXJ2aWNlcyc7XG5pbXBvcnQgUmV2aWV3cyBmcm9tICcuLi9jb21wb25lbnRzL1BhZ2VzL2luZGV4L1Jldmlld3MnO1xuaW1wb3J0IENvbnRhY3QgZnJvbSAnLi4vY29tcG9uZW50cy9QYWdlcy9pbmRleC9Db250YWN0JztcbmltcG9ydCBGb290ZXIgZnJvbSAnLi4vY29tcG9uZW50cy9zaGFyZWQvRm9vdGVyJztcblxuaW1wb3J0IE1FVEEgZnJvbSAnLi4vZGF0YS9tZXRhLmpzb24nO1xuaW1wb3J0IGtleSBmcm9tICcuLi9jb25zdGFudHMva2V5JztcblxuY29uc3QgUGFnZSA9IHN0eWxlZC5kaXZgXG4gICAgbWFyZ2luLXRvcDogMTAwcHg7XG5gO1xuXG4vKipcbiAqIEJ1aWxkIG1ldGEuXG4gKi9cbmNvbnN0IGJ1aWxkTWV0YSA9ICgpID0+IE1FVEEubWFwKCh7IG5hbWUsIGNvbnRlbnQgfSkgPT4gKFxuICAgIDxtZXRhIGtleT17a2V5KCl9IG5hbWU9e25hbWV9IGNvbnRlbnQ9e2NvbnRlbnR9IC8+XG4pKTtcblxuLyoqXG4gKiBQYWdlIGNvbmZpZ3VyYXRpb24uXG4gKi9cbmNvbnN0IFBhZ2VDb25maWcgPSAoKSA9PiAoXG4gICAgPFJlYWN0LkZyYWdtZW50PlxuICAgICAgICA8SGVhZD5cbiAgICAgICAgICAgIDxtZXRhIG5hbWU9XCJ2aWV3cG9ydFwiIGNvbnRlbnQ9XCJ3aWR0aD1kZXZpY2Utd2lkdGgsIGluaXRpYWwtc2NhbGU9MVwiIC8+XG4gICAgICAgICAgICA8bWV0YSBjaGFyU2V0PVwidXRmLThcIiAvPlxuICAgICAgICAgICAgPG1ldGEgaHR0cEVxdWl2PVwiQ29udGVudC1UeXBlXCIgY29udGVudD1cInRleHQvaHRtbDsgY2hhcnNldD11dGYtOFwiIC8+XG4gICAgICAgICAgICA8bGluayByZWw9XCJzdHlsZXNoZWV0XCIgaHJlZj1cImh0dHBzOi8vdXNlLnR5cGVraXQubmV0L3h3czNidXQuY3NzXCIgLz5cbiAgICAgICAgICAgIHsgYnVpbGRNZXRhKCkgfVxuICAgICAgICAgICAgPHRpdGxlPiBBbHBoYSBDdXN0b20gPC90aXRsZT5cblxuICAgICAgICA8L0hlYWQ+XG4gICAgICAgIDxzdHlsZSBqc3ggZ2xvYmFsPlxuICAgICAgICAgICAge2BcbiAgICAgICAgICAgICAgICBib2R5IHtcbiAgICAgICAgICAgICAgICAgICAgbWFyZ2luOiAwO1xuICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgIGB9XG4gICAgICAgIDwvc3R5bGU+XG4gICAgPC9SZWFjdC5GcmFnbWVudD5cbik7XG5cbi8qKlxuICogSW5kZXggcGFnZS5cbiAqL1xuY29uc3QgSW5kZXggPSAoKSA9PiAoXG4gICAgPFBhZ2U+XG4gICAgICAgIDxQYWdlQ29uZmlnIC8+XG4gICAgICAgIDxIZWFkZXIgLz5cbiAgICAgICAgPE1haW4gLz5cbiAgICAgICAgPEFib3V0IC8+XG4gICAgICAgIDxTZXJ2aWNlcyAvPlxuICAgICAgICA8UmV2aWV3cyAvPlxuICAgICAgICA8Q29udGFjdCAvPlxuICAgICAgICA8Rm9vdGVyIC8+XG4gICAgPC9QYWdlPlxuKTtcblxuZXhwb3J0IGRlZmF1bHQgSW5kZXg7XG4iXX0= */\n/*@ sourceURL=/Users/jeffersonmourak/projects/joana/pages/index.js */"));
+}, "body{margin:0;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9qZWZmZXJzb25tb3VyYWsvcHJvamVjdHMvam9hbmEvcGFnZXMvaW5kZXguanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBMENhLEFBRzhCLFNBQ2IiLCJmaWxlIjoiL1VzZXJzL2plZmZlcnNvbm1vdXJhay9wcm9qZWN0cy9qb2FuYS9wYWdlcy9pbmRleC5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCBmcm9tICdyZWFjdCc7XG5pbXBvcnQgSGVhZCBmcm9tICduZXh0L2hlYWQnO1xuaW1wb3J0IHN0eWxlZCBmcm9tICdzdHlsZWQtY29tcG9uZW50cyc7XG5cbmltcG9ydCBIZWFkZXIgZnJvbSAnLi4vY29tcG9uZW50cy9zaGFyZWQvSGVhZGVyJztcbmltcG9ydCBNYWluIGZyb20gJy4uL2NvbXBvbmVudHMvUGFnZXMvaW5kZXgvTWFpbic7XG5pbXBvcnQgQWJvdXQgZnJvbSAnLi4vY29tcG9uZW50cy9QYWdlcy9pbmRleC9BYm91dCc7XG5pbXBvcnQgU2VydmljZXMgZnJvbSAnLi4vY29tcG9uZW50cy9QYWdlcy9pbmRleC9TZXJ2aWNlcyc7XG5pbXBvcnQgUmV2aWV3cyBmcm9tICcuLi9jb21wb25lbnRzL1BhZ2VzL2luZGV4L1Jldmlld3MnO1xuaW1wb3J0IENvbnRhY3QgZnJvbSAnLi4vY29tcG9uZW50cy9QYWdlcy9pbmRleC9Db250YWN0JztcbmltcG9ydCBGb290ZXIgZnJvbSAnLi4vY29tcG9uZW50cy9zaGFyZWQvRm9vdGVyJztcblxuaW1wb3J0IE1FVEEgZnJvbSAnLi4vZGF0YS9tZXRhLmpzb24nO1xuaW1wb3J0IHNlcnZpY2VzIGZyb20gJy4uL2RhdGEvc2VydmljZXMuanNvbic7XG5pbXBvcnQga2V5IGZyb20gJy4uL2NvbnN0YW50cy9rZXknO1xuXG5jb25zdCBQYWdlID0gc3R5bGVkLmRpdmBcbiAgICBtYXJnaW4tdG9wOiAxMDBweDtcbmA7XG5cbi8qKlxuICogQnVpbGQgbWV0YS5cbiAqL1xuY29uc3QgYnVpbGRNZXRhID0gKCkgPT4gTUVUQS5tYXAoKHsgbmFtZSwgY29udGVudCB9KSA9PiAoXG4gICAgPG1ldGEga2V5PXtrZXkoKX0gbmFtZT17bmFtZX0gY29udGVudD17Y29udGVudH0gLz5cbikpO1xuXG4vKipcbiAqIFBhZ2UgY29uZmlndXJhdGlvbi5cbiAqL1xuY29uc3QgUGFnZUNvbmZpZyA9ICgpID0+IChcbiAgICA8UmVhY3QuRnJhZ21lbnQ+XG4gICAgICAgIDxIZWFkPlxuICAgICAgICAgICAgPG1ldGEgbmFtZT1cInZpZXdwb3J0XCIgY29udGVudD1cIndpZHRoPWRldmljZS13aWR0aCwgaW5pdGlhbC1zY2FsZT0xXCIgLz5cbiAgICAgICAgICAgIDxtZXRhIGNoYXJTZXQ9XCJ1dGYtOFwiIC8+XG4gICAgICAgICAgICA8bWV0YSBodHRwRXF1aXY9XCJDb250ZW50LVR5cGVcIiBjb250ZW50PVwidGV4dC9odG1sOyBjaGFyc2V0PXV0Zi04XCIgLz5cbiAgICAgICAgICAgIDxsaW5rIHJlbD1cInN0eWxlc2hlZXRcIiBocmVmPVwiaHR0cHM6Ly91c2UudHlwZWtpdC5uZXQveHdzM2J1dC5jc3NcIiAvPlxuICAgICAgICAgICAgeyBidWlsZE1ldGEoKSB9XG4gICAgICAgICAgICA8dGl0bGU+IEFscGhhIEN1c3RvbSA8L3RpdGxlPlxuXG4gICAgICAgIDwvSGVhZD5cbiAgICAgICAgPHN0eWxlIGpzeCBnbG9iYWw+XG4gICAgICAgICAgICB7YFxuICAgICAgICAgICAgICAgIGJvZHkge1xuICAgICAgICAgICAgICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgYH1cbiAgICAgICAgPC9zdHlsZT5cbiAgICA8L1JlYWN0LkZyYWdtZW50PlxuKTtcblxuLyoqXG4gKiBJbmRleCBwYWdlLlxuICovXG5jb25zdCBJbmRleCA9ICgpID0+IChcbiAgICA8UGFnZT5cbiAgICAgICAgPFBhZ2VDb25maWcgLz5cbiAgICAgICAgPEhlYWRlciAvPlxuICAgICAgICA8TWFpbiAvPlxuICAgICAgICA8QWJvdXQgLz5cbiAgICAgICAgPFNlcnZpY2VzIC8+XG4gICAgICAgIDxSZXZpZXdzIC8+XG4gICAgICAgIDxDb250YWN0IC8+XG4gICAgICAgIDxGb290ZXIgLz5cbiAgICA8L1BhZ2U+XG4pO1xuXG5leHBvcnQgZGVmYXVsdCBJbmRleDtcbiJdfQ== */\n/*@ sourceURL=/Users/jeffersonmourak/projects/joana/pages/index.js */"));
 /**
  * Index page.
  */
@@ -1905,55 +2016,55 @@ const PageConfig = () => __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Frag
 const Index = () => __jsx(Page, {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 55
+    lineNumber: 56
   },
   __self: undefined
 }, __jsx(PageConfig, {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 56
+    lineNumber: 57
   },
   __self: undefined
 }), __jsx(_components_shared_Header__WEBPACK_IMPORTED_MODULE_4__["default"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 57
+    lineNumber: 58
   },
   __self: undefined
 }), __jsx(_components_Pages_index_Main__WEBPACK_IMPORTED_MODULE_5__["default"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 58
+    lineNumber: 59
   },
   __self: undefined
 }), __jsx(_components_Pages_index_About__WEBPACK_IMPORTED_MODULE_6__["default"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 59
+    lineNumber: 60
   },
   __self: undefined
 }), __jsx(_components_Pages_index_Services__WEBPACK_IMPORTED_MODULE_7__["default"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 60
+    lineNumber: 61
   },
   __self: undefined
 }), __jsx(_components_Pages_index_Reviews__WEBPACK_IMPORTED_MODULE_8__["default"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 61
+    lineNumber: 62
   },
   __self: undefined
 }), __jsx(_components_Pages_index_Contact__WEBPACK_IMPORTED_MODULE_9__["default"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 62
+    lineNumber: 63
   },
   __self: undefined
 }), __jsx(_components_shared_Footer__WEBPACK_IMPORTED_MODULE_10__["default"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 63
+    lineNumber: 64
   },
   __self: undefined
 }));

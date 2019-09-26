@@ -28,6 +28,7 @@ const Text = styled.p`${styleBuilder({
 const Image = styled.div`
     width: 100%;
     min-height: calc(100% - 100px);
+    height: 75vh;
     background-image: url(${props => props.src});
     background-size: cover;
     margin-top: 100px;
@@ -47,7 +48,7 @@ const ServiceItem = styled.button`${styleBuilder({
 
         &:focus {
             outline: 0;
-            color: ${colors.black}
+            color: ${colors.grey}
         }
 
         &:disabled {
@@ -58,7 +59,9 @@ const ServiceItem = styled.button`${styleBuilder({
         }
     `,
     others: `
-        display: none;
+        &:not(.compare) {
+            display: none;
+        }
         
         &:disabled {
             display: block;
@@ -103,6 +106,7 @@ const Arrow = styled.button`
             background-image: url(/static/arrow-white.svg);
             position: absolute;
             top: 50vh;
+            background-repeat: no-repeat;
         `,
         others: `
             width: 32px;
@@ -124,6 +128,7 @@ class Services extends React.Component {
         this.state = {
             current: 0,
             services: SERVICES,
+            isBefore: true,
         };
     }
 
@@ -134,6 +139,17 @@ class Services extends React.Component {
         this.setState(state => ({
             ...state,
             current,
+            isBefore: true,
+        }));
+    }
+
+    /**
+     * On Select before.
+     */
+    onSelectBefore(isBefore) {
+        this.setState(state => ({
+            ...state,
+            isBefore,
         }));
     }
 
@@ -141,9 +157,20 @@ class Services extends React.Component {
      * Get current.
      */
     getCurrent() {
-        const { services, current } = this.state;
+        const { services, current, isBefore } = this.state;
+        const activeService = services[current];
 
-        return services[current];
+        let background = isBefore ? activeService.before : activeService.after;
+
+        if (activeService.hideCompare) {
+            // eslint-disable-next-line prefer-destructuring
+            background = activeService.background;
+        }
+
+        return {
+            ...activeService,
+            background,
+        };
     }
 
     /**
@@ -178,6 +205,38 @@ class Services extends React.Component {
     }
 
     /**
+     * Compare options.
+     */
+    compareOptions() {
+        const { services, current, isBefore } = this.state;
+        const activeService = services[current];
+
+        const before = (
+            <ServiceItem
+                key={key()}
+                className="compare"
+                disabled={isBefore}
+                onClick={() => this.onSelectBefore(true)}
+            >
+                Before
+            </ServiceItem>
+        );
+
+        const after = (
+            <ServiceItem
+                key={key()}
+                className="compare"
+                disabled={!isBefore}
+                onClick={() => this.onSelectBefore(false)}
+            >
+                After
+            </ServiceItem>
+        );
+
+        return activeService.hideCompare ? [] : [before, after];
+    }
+
+    /**
      * Render.
      */
     render() {
@@ -188,6 +247,10 @@ class Services extends React.Component {
                     <Text>
                         { text }
                     </Text>
+
+                    <ServiceList>
+                        { this.compareOptions() }
+                    </ServiceList>
 
                     <ServiceList>
                         {this.listServices()}

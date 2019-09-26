@@ -115,6 +115,7 @@ const Arrow = styled.button`
             background-image: url(/static/arrow.svg);
             position: absolute;
             top: 15vh;
+            background-repeat: no-repeat;
         `,
         others: `
             width: 32px;

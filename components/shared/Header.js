@@ -46,25 +46,6 @@ const Logo = styled.img`
     margin: 0 20px;
 `;
 
-const Phone = styled.a`${styleBuilder({
-    defaultStyle: `
-        color: ${colors.blue};
-        font-size: 35px;
-        ${fonts.bebasBold}
-        position: absolute;
-        right: 50px;
-        text-decoration: none;
-        transition: all 300ms ease;
-
-        &:hover {
-            color: ${colors.black};
-        }
-    `,
-    others: `
-        display: none;
-    `,
-})}`;
-
 const Nav = styled.nav`${styleBuilder({
     defaultStyle: 'display: none;',
     others: `
@@ -114,21 +95,6 @@ const Hamburger = styled.img`${styleBuilder({
     `,
 })}`;
 
-const MobilePhone = styled.a`${styleBuilder({
-    defaultStyle: 'display: none;',
-    others: `
-        display: block;
-        width: 55px;
-        height: 55px;
-        position: fixed;
-        z-index: 2;
-        top: 25px;
-        right: 20px;
-        background-image: url(/static/phone.svg);
-        background-size: cover;
-    `,
-})}`;
-
 /**
  * Quick close.
  */
@@ -159,9 +125,6 @@ const Header = () => (
         <Logo alt="logo" src="/static/logo.svg" />
         <Anchor href="#about-us">About us</Anchor>
         <Anchor href="#contact">Contact</Anchor>
-
-        <Phone href="tel:508-360-5657">508-360-5657</Phone>
-        <MobilePhone href="tel:508-360-5657" />
 
     </HeaderWrapper>
 );

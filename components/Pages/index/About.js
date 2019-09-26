@@ -7,12 +7,14 @@ import about from '../../../data/about.json';
 
 const Text = styled.p`${styleBuilder({
     defaultStyle: `
-        font-size: 20px;
+        font-size: 25px;
         line-height: 30px;
-        padding: 0 55px;
+        padding: 0 115px;
+        word-spacing: 5px;
     `,
-    mobile: `
+    others: `
         ${fonts.bebasRegular}
+        font-size: 20px;
         line-height: 20px;
         padding: 0;
     `,

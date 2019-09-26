@@ -29,8 +29,8 @@ var Text = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].p.withConfi
   displayName: "About__Text",
   componentId: "g92kea-0"
 })(["", ""], Object(_constants_styleBuilder__WEBPACK_IMPORTED_MODULE_3__["default"])({
-  defaultStyle: "\n        font-size: 20px;\n        line-height: 30px;\n        padding: 0 55px;\n    ",
-  mobile: "\n        ".concat(_constants_fonts__WEBPACK_IMPORTED_MODULE_4__["default"].bebasRegular, "\n        line-height: 20px;\n        padding: 0;\n    ")
+  defaultStyle: "\n        font-size: 25px;\n        line-height: 30px;\n        padding: 0 115px;\n        word-spacing: 5px;\n    ",
+  others: "\n        ".concat(_constants_fonts__WEBPACK_IMPORTED_MODULE_4__["default"].bebasRegular, "\n        font-size: 20px;\n        line-height: 20px;\n        padding: 0;\n    ")
 }));
 /**
  * Section component.
@@ -42,13 +42,13 @@ var AboutSection = function AboutSection() {
     title: "About Us",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 27
     },
     __self: this
   }, __jsx(Text, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 28
     },
     __self: this
   }, _data_about_json__WEBPACK_IMPORTED_MODULE_5__.text));
@@ -93,47 +93,69 @@ var Content = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.with
   displayName: "Contact__Content",
   componentId: "vtwygz-0"
 })(["", ""], Object(_constants_styleBuilder__WEBPACK_IMPORTED_MODULE_7__["default"])({
-  defaultStyle: "\n        display: flex;\n        flex-direction: row-reverse;\n        justify-content: space-between;\n        min-height: calc(75vh - 50px);\n        align-items: center;\n        margin-bottom: 50px;\n    ",
+  defaultStyle: "\n        display: flex;\n        flex-direction: column;\n        justify-content: space-between;\n        min-height: calc(75vh - 50px);\n        align-items: center;\n        margin-bottom: 50px;\n    ",
   others: "\n        flex-direction: column;\n    "
 }));
 var Column = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
   displayName: "Contact__Column",
   componentId: "vtwygz-1"
-})(["", ""], Object(_constants_styleBuilder__WEBPACK_IMPORTED_MODULE_7__["default"])({
-  defaultStyle: "\n        display: flex;\n        flex-direction: column;\n        min-height: 500px;\n        height: calc(75vh - 50px);\n        width: 100%;\n        align-items: center;\n    ",
+})(["display:flex;flex-direction:column;height:calc(", "vh - 50px);width:100%;align-items:center;min-height:", "px;", ""], function (props) {
+  return props.height || 75;
+}, function (props) {
+  return props.minHeight || 0;
+}, Object(_constants_styleBuilder__WEBPACK_IMPORTED_MODULE_7__["default"])({
   others: "\n        margin-bottom: 20px;\n    "
+}));
+var Row = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
+  displayName: "Contact__Row",
+  componentId: "vtwygz-2"
+})(["", ""], Object(_constants_styleBuilder__WEBPACK_IMPORTED_MODULE_7__["default"])({
+  defaultStyle: "\n        display: flex;\n        flex-direction: row-reverse;\n        width: 100%;\n        text-align: center;\n        justify-content: center;\n    ",
+  others: "\n        margin-bottom: 20px;\n        flex-direction: column;\n    "
 }));
 var Form = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].form.withConfig({
   displayName: "Contact__Form",
-  componentId: "vtwygz-2"
+  componentId: "vtwygz-3"
 })(["display:flex;flex-direction:column;height:calc(75vh - 50px);width:100%;"]);
 var Pointer = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].button.withConfig({
   displayName: "Contact__Pointer",
-  componentId: "vtwygz-3"
+  componentId: "vtwygz-4"
 })(["border:none;background:transparent;cursor:pointer;width:30px;height:30px;background-image:url(/static/pointer.svg);background-size:cover;"]);
 var Label = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].label.withConfig({
   displayName: "Contact__Label",
-  componentId: "vtwygz-4"
+  componentId: "vtwygz-5"
 })(["display:flex;flex-direction:column;margin-bottom:20px;font-size:22px;&::before{content:'", "';}"], function (props) {
   return props.text;
 });
+var ContactPhone = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].a.withConfig({
+  displayName: "Contact__ContactPhone",
+  componentId: "vtwygz-6"
+})(["color:", ";font-size:35px;", " text-decoration:none;transition:all 300ms ease;&:hover{color:", ";}"], _constants_colors__WEBPACK_IMPORTED_MODULE_5__["default"].blue, _constants_fonts__WEBPACK_IMPORTED_MODULE_6__["default"].bebasBold, _constants_colors__WEBPACK_IMPORTED_MODULE_5__["default"].black);
 var InputStyle = "\n    line-height: 45px;\n    font-size: 22px;\n    border: 1px solid ".concat(_constants_colors__WEBPACK_IMPORTED_MODULE_5__["default"].black, ";\n    width: 95%;\n    ").concat(_constants_fonts__WEBPACK_IMPORTED_MODULE_6__["default"].bebasRegular, "\n");
 var Input = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].input.withConfig({
   displayName: "Contact__Input",
-  componentId: "vtwygz-5"
+  componentId: "vtwygz-7"
 })(["", ""], InputStyle);
 var Phone = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(react_input_mask__WEBPACK_IMPORTED_MODULE_3___default.a).withConfig({
   displayName: "Contact__Phone",
-  componentId: "vtwygz-6"
+  componentId: "vtwygz-8"
 })(["", ""], InputStyle);
 var Message = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].textarea.withConfig({
   displayName: "Contact__Message",
-  componentId: "vtwygz-7"
+  componentId: "vtwygz-9"
 })(["", " min-height:100px;"], InputStyle);
 var Send = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].button.withConfig({
   displayName: "Contact__Send",
-  componentId: "vtwygz-8"
+  componentId: "vtwygz-10"
 })(["cursor:pointer;font-size:22px;", " padding:10px 0;color:", ";width:95%;background-color:", ";border:0;transition:all 300ms ease;&:hover,&:focus{background-color:", ";}"], _constants_fonts__WEBPACK_IMPORTED_MODULE_6__["default"].bebasRegular, _constants_colors__WEBPACK_IMPORTED_MODULE_5__["default"].white, _constants_colors__WEBPACK_IMPORTED_MODULE_5__["default"].black, _constants_colors__WEBPACK_IMPORTED_MODULE_5__["default"].grey);
+var CallTitle = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].h3.withConfig({
+  displayName: "Contact__CallTitle",
+  componentId: "vtwygz-11"
+})(["font-size:2.5em;text-align:center;color:", ";"], _constants_colors__WEBPACK_IMPORTED_MODULE_5__["default"].blue);
+var PhoneTitle = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].h4.withConfig({
+  displayName: "Contact__PhoneTitle",
+  componentId: "vtwygz-12"
+})(["font-size:2em;text-align:center;color:", ";"], _constants_colors__WEBPACK_IMPORTED_MODULE_5__["default"].black);
 var CENTER = [41.65842, -70.385323];
 /**
  * Open maps.
@@ -157,19 +179,26 @@ var Contact = function Contact() {
     title: "Contact",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 119
+      lineNumber: 157
     },
     __self: this
   }, __jsx(Content, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 120
+      lineNumber: 158
+    },
+    __self: this
+  }, __jsx(Row, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 159
     },
     __self: this
   }, __jsx(Column, {
+    minHeight: 500,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 121
+      lineNumber: 160
     },
     __self: this
   }, __jsx(google_map_react__WEBPACK_IMPORTED_MODULE_2___default.a, {
@@ -180,7 +209,7 @@ var Contact = function Contact() {
     defaultZoom: 15,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 122
+      lineNumber: 161
     },
     __self: this
   }, __jsx(Pointer, {
@@ -189,21 +218,22 @@ var Contact = function Contact() {
     lng: -70.3855421,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 127
+      lineNumber: 166
     },
     __self: this
   }))), __jsx(Column, {
+    minHeight: 500,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 134
+      lineNumber: 173
     },
     __self: this
   }, __jsx(Form, {
-    action: "https://formspree.io/jeffersonmourak@gmail.com",
+    action: "https://formspree.io/alphacustom@icloud.com",
     method: "POST",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 135
+      lineNumber: 174
     },
     __self: this
   }, __jsx("input", {
@@ -212,7 +242,7 @@ var Contact = function Contact() {
     value: "Contact from website",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 136
+      lineNumber: 175
     },
     __self: this
   }), __jsx(Label, {
@@ -220,7 +250,7 @@ var Contact = function Contact() {
     text: "Full name",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 137
+      lineNumber: 176
     },
     __self: this
   }, __jsx(Input, {
@@ -229,7 +259,7 @@ var Contact = function Contact() {
     name: "name",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 138
+      lineNumber: 177
     },
     __self: this
   })), __jsx(Label, {
@@ -237,7 +267,7 @@ var Contact = function Contact() {
     text: "Phone",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 140
+      lineNumber: 179
     },
     __self: this
   }, __jsx(Phone, {
@@ -248,7 +278,7 @@ var Contact = function Contact() {
     name: "phone",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 141
+      lineNumber: 180
     },
     __self: this
   })), __jsx(Label, {
@@ -256,7 +286,7 @@ var Contact = function Contact() {
     text: "Email",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 143
+      lineNumber: 182
     },
     __self: this
   }, __jsx(Input, {
@@ -265,7 +295,7 @@ var Contact = function Contact() {
     name: "email",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 144
+      lineNumber: 183
     },
     __self: this
   })), __jsx(Label, {
@@ -273,7 +303,7 @@ var Contact = function Contact() {
     text: "Message",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 146
+      lineNumber: 185
     },
     __self: this
   }, __jsx(Message, {
@@ -281,17 +311,75 @@ var Contact = function Contact() {
     name: "message",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 147
+      lineNumber: 186
     },
     __self: this
   })), __jsx(Send, {
     type: "submit",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 150
+      lineNumber: 189
     },
     __self: this
-  }, " Send ")))));
+  }, " Send ")))), __jsx(Row, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 193
+    },
+    __self: this
+  }, __jsx(CallTitle, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 194
+    },
+    __self: this
+  }, " Call us ")), __jsx(Row, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 196
+    },
+    __self: this
+  }, __jsx(Column, {
+    height: 40,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 197
+    },
+    __self: this
+  }, __jsx(PhoneTitle, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 198
+    },
+    __self: this
+  }, " Cleaning division "), __jsx(ContactPhone, {
+    href: "tel:508-360-0316",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 199
+    },
+    __self: this
+  }, "508-360-0316")), __jsx(Column, {
+    height: 40,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 201
+    },
+    __self: this
+  }, __jsx(PhoneTitle, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 202
+    },
+    __self: this
+  }, " Construction division "), __jsx(ContactPhone, {
+    href: "tel:508-360-5357",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 203
+    },
+    __self: this
+  }, "508-360-5357")))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Contact);
@@ -319,7 +407,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 var Image = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
   displayName: "Main__Image",
   componentId: "g2az5q-0"
-})(["width:100%;height:75vh;background-image:url(/static/image.jpg);background-size:cover;background-position:center center;"]);
+})(["width:100%;height:85vh;background-image:url(/static/pictures/cover_1.JPG);background-size:cover;background-position:center center;"]);
 /**
  * Section component.
  */
@@ -425,7 +513,7 @@ var Arrow = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].button.wit
 })(["", " ", ""], function (props) {
   return props.direction === 'forward' ? " transform: rotateZ(180deg);\n                right: 0;\n            " : " left: 0;\n                ";
 }, Object(_constants_styleBuilder__WEBPACK_IMPORTED_MODULE_12__["default"])({
-  defaultStyle: "\n            border: none;\n            background: transparent;\n            cursor: pointer;\n            width: 72px;\n            height: 72px;\n            text-align: center;\n            font-size: 50px;\n            line-height: 80px;\n            background-image: url(/static/arrow.svg);\n            position: absolute;\n            top: 15vh;\n        ",
+  defaultStyle: "\n            border: none;\n            background: transparent;\n            cursor: pointer;\n            width: 72px;\n            height: 72px;\n            text-align: center;\n            font-size: 50px;\n            line-height: 80px;\n            background-image: url(/static/arrow.svg);\n            position: absolute;\n            top: 15vh;\n            background-repeat: no-repeat;\n        ",
   others: "\n            width: 32px;\n            height: 32px;\n        "
 }));
 /**
@@ -490,7 +578,7 @@ function (_React$Component) {
           key: Object(_constants_key__WEBPACK_IMPORTED_MODULE_10__["default"])(),
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 165
+            lineNumber: 166
           },
           __self: this
         });
@@ -518,7 +606,7 @@ function (_React$Component) {
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 175
+            lineNumber: 176
           },
           __self: this
         }, name);
@@ -564,37 +652,37 @@ function (_React$Component) {
         title: "Reviews",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 210
+          lineNumber: 211
         },
         __self: this
       }, __jsx(Content, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 211
+          lineNumber: 212
         },
         __self: this
       }, __jsx(Text, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 212
+          lineNumber: 213
         },
         __self: this
       }, __jsx("strong", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 213
+          lineNumber: 214
         },
         __self: this
       }, text), "".concat(name, " - ").concat(location)), __jsx(Stars, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 217
+          lineNumber: 218
         },
         __self: this
       }, this.getRating(rating)), __jsx(ReviewList, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 221
+          lineNumber: 222
         },
         __self: this
       }, this.listServices()), __jsx(Arrow, {
@@ -603,7 +691,7 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 225
+          lineNumber: 226
         },
         __self: this
       }), __jsx(Arrow, {
@@ -613,7 +701,7 @@ function (_React$Component) {
         direction: "forward",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 226
+          lineNumber: 227
         },
         __self: this
       })));
@@ -678,15 +766,15 @@ var Text = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].p.withConfi
 var Image = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].div.withConfig({
   displayName: "Services__Image",
   componentId: "e7qt1o-1"
-})(["width:100%;min-height:calc(100% - 100px);background-image:url(", ");background-size:cover;margin-top:100px;background-position:center center;"], function (props) {
+})(["width:100%;min-height:calc(100% - 100px);height:75vh;background-image:url(", ");background-size:cover;margin-top:100px;background-position:center center;"], function (props) {
   return props.src;
 });
 var ServiceItem = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].button.withConfig({
   displayName: "Services__ServiceItem",
   componentId: "e7qt1o-2"
 })(["", ""], Object(_constants_styleBuilder__WEBPACK_IMPORTED_MODULE_12__["default"])({
-  defaultStyle: "\n        border: none;\n        background: transparent;\n        cursor: pointer;\n        ".concat(_constants_fonts__WEBPACK_IMPORTED_MODULE_10__["default"].bebasBold, "\n        color: ").concat(_constants_colors__WEBPACK_IMPORTED_MODULE_9__["default"].white, ";\n        text-shadow: 7px 7px 10px ").concat(_constants_colors__WEBPACK_IMPORTED_MODULE_9__["default"].black, ";\n        font-size: 25px;\n        border: 1px solid transparent;\n\n        &:focus {\n            outline: 0;\n            color: ").concat(_constants_colors__WEBPACK_IMPORTED_MODULE_9__["default"].black, "\n        }\n\n        &:disabled {\n            color: ").concat(_constants_colors__WEBPACK_IMPORTED_MODULE_9__["default"].blue, ";\n            background: ").concat(_constants_colors__WEBPACK_IMPORTED_MODULE_9__["default"].white, ";\n            text-shadow: none;\n            padding: 2px 5px;\n        }\n    "),
-  others: "\n        display: none;\n        \n        &:disabled {\n            display: block;\n        }\n    "
+  defaultStyle: "\n        border: none;\n        background: transparent;\n        cursor: pointer;\n        ".concat(_constants_fonts__WEBPACK_IMPORTED_MODULE_10__["default"].bebasBold, "\n        color: ").concat(_constants_colors__WEBPACK_IMPORTED_MODULE_9__["default"].white, ";\n        text-shadow: 7px 7px 10px ").concat(_constants_colors__WEBPACK_IMPORTED_MODULE_9__["default"].black, ";\n        font-size: 25px;\n        border: 1px solid transparent;\n\n        &:focus {\n            outline: 0;\n            color: ").concat(_constants_colors__WEBPACK_IMPORTED_MODULE_9__["default"].grey, "\n        }\n\n        &:disabled {\n            color: ").concat(_constants_colors__WEBPACK_IMPORTED_MODULE_9__["default"].blue, ";\n            background: ").concat(_constants_colors__WEBPACK_IMPORTED_MODULE_9__["default"].white, ";\n            text-shadow: none;\n            padding: 2px 5px;\n        }\n    "),
+  others: "\n        &:not(.compare) {\n            display: none;\n        }\n        \n        &:disabled {\n            display: block;\n        }\n    "
 }));
 var ServiceList = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].div.withConfig({
   displayName: "Services__ServiceList",
@@ -702,7 +790,7 @@ var Arrow = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].button.wit
 })(["", " ", ""], function (props) {
   return props.direction === 'forward' ? " transform: rotateZ(180deg);\n                right: 0;\n            " : " left: 0;\n                ";
 }, Object(_constants_styleBuilder__WEBPACK_IMPORTED_MODULE_12__["default"])({
-  defaultStyle: "\n            border: none;\n            background: transparent;\n            cursor: pointer;\n            width: 72px;\n            height: 72px;\n            text-align: center;\n            font-size: 50px;\n            line-height: 80px;\n            background-image: url(/static/arrow-white.svg);\n            position: absolute;\n            top: 50vh;\n        ",
+  defaultStyle: "\n            border: none;\n            background: transparent;\n            cursor: pointer;\n            width: 72px;\n            height: 72px;\n            text-align: center;\n            font-size: 50px;\n            line-height: 80px;\n            background-image: url(/static/arrow-white.svg);\n            position: absolute;\n            top: 50vh;\n            background-repeat: no-repeat;\n        ",
   others: "\n            width: 32px;\n            height: 32px;\n        "
 }));
 /**
@@ -725,7 +813,8 @@ function (_React$Component) {
     _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__["default"])(Services).call(this, props));
     _this.state = {
       current: 0,
-      services: _data_services_json__WEBPACK_IMPORTED_MODULE_13__
+      services: _data_services_json__WEBPACK_IMPORTED_MODULE_13__,
+      isBefore: true
     };
     return _this;
   }
@@ -739,7 +828,21 @@ function (_React$Component) {
     value: function onSelectService(current) {
       this.setState(function (state) {
         return Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, state, {
-          current: current
+          current: current,
+          isBefore: true
+        });
+      });
+    }
+    /**
+     * On Select before.
+     */
+
+  }, {
+    key: "onSelectBefore",
+    value: function onSelectBefore(isBefore) {
+      this.setState(function (state) {
+        return Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, state, {
+          isBefore: isBefore
         });
       });
     }
@@ -752,8 +855,19 @@ function (_React$Component) {
     value: function getCurrent() {
       var _this$state = this.state,
           services = _this$state.services,
-          current = _this$state.current;
-      return services[current];
+          current = _this$state.current,
+          isBefore = _this$state.isBefore;
+      var activeService = services[current];
+      var background = isBefore ? activeService.before : activeService.after;
+
+      if (activeService.hideCompare) {
+        // eslint-disable-next-line prefer-destructuring
+        background = activeService.background;
+      }
+
+      return Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, activeService, {
+        background: background
+      });
     }
     /**
      * Step review.
@@ -797,11 +911,56 @@ function (_React$Component) {
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 170
+            lineNumber: 197
           },
           __self: this
         }, name);
       });
+    }
+    /**
+     * Compare options.
+     */
+
+  }, {
+    key: "compareOptions",
+    value: function compareOptions() {
+      var _this3 = this;
+
+      var _this$state4 = this.state,
+          services = _this$state4.services,
+          current = _this$state4.current,
+          isBefore = _this$state4.isBefore;
+      var activeService = services[current];
+
+      var before = __jsx(ServiceItem, {
+        key: Object(_constants_key__WEBPACK_IMPORTED_MODULE_11__["default"])(),
+        className: "compare",
+        disabled: isBefore,
+        onClick: function onClick() {
+          return _this3.onSelectBefore(true);
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 215
+        },
+        __self: this
+      }, "Before");
+
+      var after = __jsx(ServiceItem, {
+        key: Object(_constants_key__WEBPACK_IMPORTED_MODULE_11__["default"])(),
+        className: "compare",
+        disabled: !isBefore,
+        onClick: function onClick() {
+          return _this3.onSelectBefore(false);
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 226
+        },
+        __self: this
+      }, "After");
+
+      return activeService.hideCompare ? [] : [before, after];
     }
     /**
      * Render.
@@ -810,7 +969,7 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      var _this3 = this;
+      var _this4 = this;
 
       var _this$getCurrent = this.getCurrent(),
           background = _this$getCurrent.background,
@@ -822,51 +981,57 @@ function (_React$Component) {
           src: background,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 186
+            lineNumber: 245
           },
           __self: this
         }),
         title: "Services",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 186
+          lineNumber: 245
         },
         __self: this
       }, __jsx(Content, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 187
+          lineNumber: 246
         },
         __self: this
       }, __jsx(Text, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 188
+          lineNumber: 247
         },
         __self: this
       }, text), __jsx(ServiceList, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 192
+          lineNumber: 251
+        },
+        __self: this
+      }, this.compareOptions()), __jsx(ServiceList, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 255
         },
         __self: this
       }, this.listServices()), __jsx(Arrow, {
         onClick: function onClick() {
-          return _this3.stepService(-1);
+          return _this4.stepService(-1);
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 195
+          lineNumber: 258
         },
         __self: this
       }), __jsx(Arrow, {
         onClick: function onClick() {
-          return _this3.stepService(1);
+          return _this4.stepService(1);
         },
         direction: "forward",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 196
+          lineNumber: 259
         },
         __self: this
       })));
@@ -963,37 +1128,23 @@ var Logo = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].img.withCon
   displayName: "Header__Logo",
   componentId: "ff08l-2"
 })(["height:65%;margin:0 20px;"]);
-var Phone = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].a.withConfig({
-  displayName: "Header__Phone",
-  componentId: "ff08l-3"
-})(["", ""], Object(_constants_styleBuilder__WEBPACK_IMPORTED_MODULE_4__["default"])({
-  defaultStyle: "\n        color: ".concat(_constants_colors__WEBPACK_IMPORTED_MODULE_2__["default"].blue, ";\n        font-size: 35px;\n        ").concat(_constants_fonts__WEBPACK_IMPORTED_MODULE_3__["default"].bebasBold, "\n        position: absolute;\n        right: 50px;\n        text-decoration: none;\n        transition: all 300ms ease;\n\n        &:hover {\n            color: ").concat(_constants_colors__WEBPACK_IMPORTED_MODULE_2__["default"].black, ";\n        }\n    "),
-  others: "\n        display: none;\n    "
-}));
 var Nav = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].nav.withConfig({
   displayName: "Header__Nav",
-  componentId: "ff08l-4"
+  componentId: "ff08l-3"
 })(["", ""], Object(_constants_styleBuilder__WEBPACK_IMPORTED_MODULE_4__["default"])({
   defaultStyle: 'display: none;',
   others: "\n        position: fixed;\n        top: 0;\n        z-index: 3;\n        background: white;\n        width: 100%;\n        height: 0;\n        overflow: hidden;\n        display: flex;\n        flex-direction: column;\n        justify-content: space-evenly;\n        padding: 0;\n        text-align: center;\n        transition: all 750ms ease;\n\n        input[type=\"checkbox\"]:checked + & {\n            height: 100vh;\n        }\n    "
 }));
 var NavItem = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].a.withConfig({
   displayName: "Header__NavItem",
-  componentId: "ff08l-5"
+  componentId: "ff08l-4"
 })(["color:", ";font-size:35px;", " margin:0 20px;text-decoration:none;transition:all 300ms ease;&:hover{color:", ";}"], _constants_colors__WEBPACK_IMPORTED_MODULE_2__["default"].blue, _constants_fonts__WEBPACK_IMPORTED_MODULE_3__["default"].bebasBold, _constants_colors__WEBPACK_IMPORTED_MODULE_2__["default"].black);
 var Hamburger = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].img.withConfig({
   displayName: "Header__Hamburger",
-  componentId: "ff08l-6"
+  componentId: "ff08l-5"
 })(["", ""], Object(_constants_styleBuilder__WEBPACK_IMPORTED_MODULE_4__["default"])({
   defaultStyle: 'display: none;',
   others: "\n        display: block;\n        width: 40px;\n        height: 40px;\n        position: fixed;\n        z-index: 4;\n        top: 30px;\n        left: 20px;\n    "
-}));
-var MobilePhone = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].a.withConfig({
-  displayName: "Header__MobilePhone",
-  componentId: "ff08l-7"
-})(["", ""], Object(_constants_styleBuilder__WEBPACK_IMPORTED_MODULE_4__["default"])({
-  defaultStyle: 'display: none;',
-  others: "\n        display: block;\n        width: 55px;\n        height: 55px;\n        position: fixed;\n        z-index: 2;\n        top: 25px;\n        right: 20px;\n        background-image: url(/static/phone.svg);\n        background-size: cover;\n    "
 }));
 /**
  * Quick close.
@@ -1012,14 +1163,14 @@ var Header = function Header() {
   return __jsx(HeaderWrapper, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 145
+      lineNumber: 111
     },
     __self: this
   }, __jsx("label", {
     htmlFor: "menu",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 146
+      lineNumber: 112
     },
     __self: this
   }, __jsx(Hamburger, {
@@ -1027,7 +1178,7 @@ var Header = function Header() {
     src: "/static/hamburger.svg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 147
+      lineNumber: 113
     },
     __self: this
   })), __jsx("input", {
@@ -1036,13 +1187,13 @@ var Header = function Header() {
     name: "menu",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 150
+      lineNumber: 116
     },
     __self: this
   }), __jsx(Nav, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 151
+      lineNumber: 117
     },
     __self: this
   }, __jsx(NavItem, {
@@ -1050,7 +1201,7 @@ var Header = function Header() {
     href: "#services",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 152
+      lineNumber: 118
     },
     __self: this
   }, "Services"), __jsx(NavItem, {
@@ -1058,7 +1209,7 @@ var Header = function Header() {
     href: "#reviews",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 153
+      lineNumber: 119
     },
     __self: this
   }, "Reviews"), __jsx(NavItem, {
@@ -1066,7 +1217,7 @@ var Header = function Header() {
     href: "#about-us",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 154
+      lineNumber: 120
     },
     __self: this
   }, "About us"), __jsx(NavItem, {
@@ -1074,21 +1225,21 @@ var Header = function Header() {
     href: "#contact",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 155
+      lineNumber: 121
     },
     __self: this
   }, "Contact")), __jsx(Anchor, {
     href: "#services",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 157
+      lineNumber: 123
     },
     __self: this
   }, "Services"), __jsx(Anchor, {
     href: "#reviews",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 158
+      lineNumber: 124
     },
     __self: this
   }, "Reviews"), __jsx(Logo, {
@@ -1096,38 +1247,24 @@ var Header = function Header() {
     src: "/static/logo.svg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 159
+      lineNumber: 125
     },
     __self: this
   }), __jsx(Anchor, {
     href: "#about-us",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 160
+      lineNumber: 126
     },
     __self: this
   }, "About us"), __jsx(Anchor, {
     href: "#contact",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 161
+      lineNumber: 127
     },
     __self: this
-  }, "Contact"), __jsx(Phone, {
-    href: "tel:508-360-5657",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 163
-    },
-    __self: this
-  }, "508-360-5657"), __jsx(MobilePhone, {
-    href: "tel:508-360-5657",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 164
-    },
-    __self: this
-  }));
+  }, "Contact"));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Header);
@@ -1199,7 +1336,7 @@ var SectionWrapper = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].s
 var Title = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].h2.withConfig({
   displayName: "Section__Title",
   componentId: "sc-1cix69p-1"
-})(["font-size:3.3em;text-align:center;"]);
+})(["font-size:3.3em;text-align:center;margin-top:0;"]);
 var Boundaries = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
   displayName: "Section__Boundaries",
   componentId: "sc-1cix69p-2"
@@ -1211,7 +1348,7 @@ var Foreground = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.w
 var Background = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
   displayName: "Section__Background",
   componentId: "sc-1cix69p-4"
-})(["position:absolute;width:100%;height:100%;z-index:0;"]);
+})(["position:absolute;width:100%;height:75vh;z-index:0;"]);
 /**
  * Section component.
  */
@@ -1225,52 +1362,52 @@ var Section = function Section(_ref) {
     id: id,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 46
     },
     __self: this
   }, __jsx(_If__WEBPACK_IMPORTED_MODULE_4__["default"], {
     condition: react__WEBPACK_IMPORTED_MODULE_0___default.a.isValidElement(background),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 47
     },
     __self: this
   }, __jsx(Background, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 48
     },
     __self: this
   }, background)), __jsx(Foreground, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 52
     },
     __self: this
   }, __jsx(_If__WEBPACK_IMPORTED_MODULE_4__["default"], {
     condition: title,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
+      lineNumber: 53
     },
     __self: this
   }, __jsx(Title, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 54
     },
     __self: this
   }, title)), __jsx(_If__WEBPACK_IMPORTED_MODULE_4__["default"], {
     condition: react__WEBPACK_IMPORTED_MODULE_0___default.a.isValidElement(children),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 57
     },
     __self: this
   }, __jsx(Boundaries, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 58
     },
     __self: this
   }, children))));
@@ -1378,7 +1515,7 @@ var styleBuilder = function styleBuilder(_ref) {
 /*! exports provided: text, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"text\":\"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.\\nLorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ulla\"}");
+module.exports = JSON.parse("{\"text\":\"Under Rudy Gazolla guidance Alpha custom inc. has grown steadily since opening for over a decade. Rudy and Joanna operate under a simple guideline of striving to provide each individual customer with friendly, reliable, high quality service. While always an active hands on business owner, Rudy and Joanna has also developed a reputation as an industry expert.\"}");
 
 /***/ }),
 
@@ -1408,10 +1545,10 @@ module.exports = JSON.parse("[{\"name\":\"Abby\",\"rating\":1,\"text\":\"Great w
 /*!****************************!*\
   !*** ./data/services.json ***!
   \****************************/
-/*! exports provided: 0, 1, 2, 3, 4, 5, 6, 7, default */
+/*! exports provided: 0, 1, 2, 3, 4, 5, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("[{\"name\":\"Service 1\",\"id\":0,\"background\":\"/static/image.jpg\",\"text\":\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer purus odio, maximus ut ligula ut, bibendum lobortis odio. Pellentesque non tempus ante. Integer vel est id tortor porttitor interdum. Nulla quis ultricies orci. Quisque rhoncus velit quis ante pellentesque tempus quis vitae risus. Cras elit ipsum, tincidunt quis augue sit amet, condimentum egestas nisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed vitae molestie.\"},{\"name\":\"Service 2\",\"id\":1,\"background\":\"/static/image.jpg\",\"text\":\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer purus odio, maximus ut ligula ut, bibendum lobortis odio. Pellentesque non tempus ante. Integer vel est id tortor porttitor interdum. Nulla quis ultricies orci. Quisque rhoncus velit quis ante pellentesque tempus quis vitae risus. Cras elit ipsum, tincidunt quis augue sit amet, condimentum egestas nisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed vitae molestie.\"},{\"name\":\"Service 3\",\"id\":2,\"background\":\"/static/image.jpg\",\"text\":\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer purus odio, maximus ut ligula ut, bibendum lobortis odio. Pellentesque non tempus ante. Integer vel est id tortor porttitor interdum. Nulla quis ultricies orci. Quisque rhoncus velit quis ante pellentesque tempus quis vitae risus. Cras elit ipsum, tincidunt quis augue sit amet, condimentum egestas nisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed vitae molestie.\"},{\"name\":\"Service 4\",\"id\":3,\"background\":\"/static/image.jpg\",\"text\":\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer purus odio, maximus ut ligula ut, bibendum lobortis odio. Pellentesque non tempus ante. Integer vel est id tortor porttitor interdum. Nulla quis ultricies orci. Quisque rhoncus velit quis ante pellentesque tempus quis vitae risus. Cras elit ipsum, tincidunt quis augue sit amet, condimentum egestas nisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed vitae molestie.\"},{\"name\":\"Service 5\",\"id\":4,\"background\":\"/static/image.jpg\",\"text\":\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer purus odio, maximus ut ligula ut, bibendum lobortis odio. Pellentesque non tempus ante. Integer vel est id tortor porttitor interdum. Nulla quis ultricies orci. Quisque rhoncus velit quis ante pellentesque tempus quis vitae risus. Cras elit ipsum, tincidunt quis augue sit amet, condimentum egestas nisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed vitae molestie.\"},{\"name\":\"Service 6\",\"id\":5,\"background\":\"/static/image.jpg\",\"text\":\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer purus odio, maximus ut ligula ut, bibendum lobortis odio. Pellentesque non tempus ante. Integer vel est id tortor porttitor interdum. Nulla quis ultricies orci. Quisque rhoncus velit quis ante pellentesque tempus quis vitae risus. Cras elit ipsum, tincidunt quis augue sit amet, condimentum egestas nisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed vitae molestie.\"},{\"name\":\"Service 7\",\"id\":6,\"background\":\"/static/image.jpg\",\"text\":\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer purus odio, maximus ut ligula ut, bibendum lobortis odio. Pellentesque non tempus ante. Integer vel est id tortor porttitor interdum. Nulla quis ultricies orci. Quisque rhoncus velit quis ante pellentesque tempus quis vitae risus. Cras elit ipsum, tincidunt quis augue sit amet, condimentum egestas nisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed vitae molestie.\"},{\"name\":\"Service 8\",\"id\":7,\"background\":\"/static/image.jpg\",\"text\":\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer purus odio, maximus ut ligula ut, bibendum lobortis odio. Pellentesque non tempus ante. Integer vel est id tortor porttitor interdum. Nulla quis ultricies orci. Quisque rhoncus velit quis ante pellentesque tempus quis vitae risus. Cras elit ipsum, tincidunt quis augue sit amet, condimentum egestas nisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed vitae molestie.\"}]");
+module.exports = JSON.parse("[{\"name\":\"Painting\",\"before\":\"/static/pictures/painting_5_before.jpg\",\"after\":\"/static/pictures/painting_5_after.jpg\",\"text\":\"There’s a reason we’re the most trusted house painter on Cape Cod. We are trained to make your painting dreams come true. When you hire Alpha Custom to paint the interior or exterior of your home we try to make it as painless for you as possible.\"},{\"name\":\"Side wall\",\"before\":\"/static/pictures/side_wall_1_before.jpg\",\"after\":\"/static/pictures/side_wall_1_after.jpg\",\"text\":\"\"},{\"name\":\"Dry wall\",\"background\":\"/static/pictures/dry_wall_1.jpeg\",\"hideCompare\":true,\"text\":\"\"},{\"name\":\"Carpentry\",\"background\":\"/static/pictures/carpentry_11.jpg\",\"hideCompare\":true,\"text\":\"\"},{\"name\":\"Floor\",\"before\":\"/static/pictures/floor_2_before.jpg\",\"after\":\"/static/pictures/floor_2_after.jpg\",\"text\":\"\"},{\"name\":\"Power washing\",\"hideCompare\":true,\"background\":\"/static/pictures/power_wash_4.jpg\",\"text\":\"Power washing is used to clean your house exterior (house washing), deck, outdoor furniture as well as for commercial uses such as concrete cleaning and removing contaminants like mold or mildew that have adhered to  the surface of a building.\"}]");
 
 /***/ }),
 
@@ -15477,10 +15614,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_shared_Footer__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/shared/Footer */ "./components/shared/Footer.js");
 /* harmony import */ var _data_meta_json__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../data/meta.json */ "./data/meta.json");
 var _data_meta_json__WEBPACK_IMPORTED_MODULE_11___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../data/meta.json */ "./data/meta.json", 1);
-/* harmony import */ var _constants_key__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../constants/key */ "./constants/key.js");
+/* harmony import */ var _data_services_json__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../data/services.json */ "./data/services.json");
+var _data_services_json__WEBPACK_IMPORTED_MODULE_12___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../data/services.json */ "./data/services.json", 1);
+/* harmony import */ var _constants_key__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../constants/key */ "./constants/key.js");
 var _jsxFileName = "/Users/jeffersonmourak/projects/joana/pages/index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+
 
 
 
@@ -15506,12 +15646,12 @@ var buildMeta = function buildMeta() {
     var name = _ref.name,
         content = _ref.content;
     return __jsx("meta", {
-      key: Object(_constants_key__WEBPACK_IMPORTED_MODULE_12__["default"])(),
+      key: Object(_constants_key__WEBPACK_IMPORTED_MODULE_13__["default"])(),
       name: name,
       content: content,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 24
+        lineNumber: 25
       },
       __self: this
     });
@@ -15526,13 +15666,13 @@ var PageConfig = function PageConfig() {
   return __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 32
     },
     __self: this
   }, __jsx(next_head__WEBPACK_IMPORTED_MODULE_2___default.a, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 33
     },
     __self: this
   }, __jsx("meta", {
@@ -15541,7 +15681,7 @@ var PageConfig = function PageConfig() {
     className: "jsx-3826789607",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 34
     },
     __self: this
   }), __jsx("meta", {
@@ -15549,7 +15689,7 @@ var PageConfig = function PageConfig() {
     className: "jsx-3826789607",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 35
     },
     __self: this
   }), __jsx("meta", {
@@ -15558,7 +15698,7 @@ var PageConfig = function PageConfig() {
     className: "jsx-3826789607",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 36
     },
     __self: this
   }), __jsx("link", {
@@ -15567,20 +15707,20 @@ var PageConfig = function PageConfig() {
     className: "jsx-3826789607",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 37
     },
     __self: this
   }), buildMeta(), __jsx("title", {
     className: "jsx-3826789607",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 39
     },
     __self: this
   }, " Alpha Custom ")), __jsx(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
     id: "3826789607",
     __self: this
-  }, "body{margin:0;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9qZWZmZXJzb25tb3VyYWsvcHJvamVjdHMvam9hbmEvcGFnZXMvaW5kZXguanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBeUNhLEFBRzhCLFNBQ2IiLCJmaWxlIjoiL1VzZXJzL2plZmZlcnNvbm1vdXJhay9wcm9qZWN0cy9qb2FuYS9wYWdlcy9pbmRleC5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCBmcm9tICdyZWFjdCc7XG5pbXBvcnQgSGVhZCBmcm9tICduZXh0L2hlYWQnO1xuaW1wb3J0IHN0eWxlZCBmcm9tICdzdHlsZWQtY29tcG9uZW50cyc7XG5cbmltcG9ydCBIZWFkZXIgZnJvbSAnLi4vY29tcG9uZW50cy9zaGFyZWQvSGVhZGVyJztcbmltcG9ydCBNYWluIGZyb20gJy4uL2NvbXBvbmVudHMvUGFnZXMvaW5kZXgvTWFpbic7XG5pbXBvcnQgQWJvdXQgZnJvbSAnLi4vY29tcG9uZW50cy9QYWdlcy9pbmRleC9BYm91dCc7XG5pbXBvcnQgU2VydmljZXMgZnJvbSAnLi4vY29tcG9uZW50cy9QYWdlcy9pbmRleC9TZXJ2aWNlcyc7XG5pbXBvcnQgUmV2aWV3cyBmcm9tICcuLi9jb21wb25lbnRzL1BhZ2VzL2luZGV4L1Jldmlld3MnO1xuaW1wb3J0IENvbnRhY3QgZnJvbSAnLi4vY29tcG9uZW50cy9QYWdlcy9pbmRleC9Db250YWN0JztcbmltcG9ydCBGb290ZXIgZnJvbSAnLi4vY29tcG9uZW50cy9zaGFyZWQvRm9vdGVyJztcblxuaW1wb3J0IE1FVEEgZnJvbSAnLi4vZGF0YS9tZXRhLmpzb24nO1xuaW1wb3J0IGtleSBmcm9tICcuLi9jb25zdGFudHMva2V5JztcblxuY29uc3QgUGFnZSA9IHN0eWxlZC5kaXZgXG4gICAgbWFyZ2luLXRvcDogMTAwcHg7XG5gO1xuXG4vKipcbiAqIEJ1aWxkIG1ldGEuXG4gKi9cbmNvbnN0IGJ1aWxkTWV0YSA9ICgpID0+IE1FVEEubWFwKCh7IG5hbWUsIGNvbnRlbnQgfSkgPT4gKFxuICAgIDxtZXRhIGtleT17a2V5KCl9IG5hbWU9e25hbWV9IGNvbnRlbnQ9e2NvbnRlbnR9IC8+XG4pKTtcblxuLyoqXG4gKiBQYWdlIGNvbmZpZ3VyYXRpb24uXG4gKi9cbmNvbnN0IFBhZ2VDb25maWcgPSAoKSA9PiAoXG4gICAgPFJlYWN0LkZyYWdtZW50PlxuICAgICAgICA8SGVhZD5cbiAgICAgICAgICAgIDxtZXRhIG5hbWU9XCJ2aWV3cG9ydFwiIGNvbnRlbnQ9XCJ3aWR0aD1kZXZpY2Utd2lkdGgsIGluaXRpYWwtc2NhbGU9MVwiIC8+XG4gICAgICAgICAgICA8bWV0YSBjaGFyU2V0PVwidXRmLThcIiAvPlxuICAgICAgICAgICAgPG1ldGEgaHR0cEVxdWl2PVwiQ29udGVudC1UeXBlXCIgY29udGVudD1cInRleHQvaHRtbDsgY2hhcnNldD11dGYtOFwiIC8+XG4gICAgICAgICAgICA8bGluayByZWw9XCJzdHlsZXNoZWV0XCIgaHJlZj1cImh0dHBzOi8vdXNlLnR5cGVraXQubmV0L3h3czNidXQuY3NzXCIgLz5cbiAgICAgICAgICAgIHsgYnVpbGRNZXRhKCkgfVxuICAgICAgICAgICAgPHRpdGxlPiBBbHBoYSBDdXN0b20gPC90aXRsZT5cblxuICAgICAgICA8L0hlYWQ+XG4gICAgICAgIDxzdHlsZSBqc3ggZ2xvYmFsPlxuICAgICAgICAgICAge2BcbiAgICAgICAgICAgICAgICBib2R5IHtcbiAgICAgICAgICAgICAgICAgICAgbWFyZ2luOiAwO1xuICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgIGB9XG4gICAgICAgIDwvc3R5bGU+XG4gICAgPC9SZWFjdC5GcmFnbWVudD5cbik7XG5cbi8qKlxuICogSW5kZXggcGFnZS5cbiAqL1xuY29uc3QgSW5kZXggPSAoKSA9PiAoXG4gICAgPFBhZ2U+XG4gICAgICAgIDxQYWdlQ29uZmlnIC8+XG4gICAgICAgIDxIZWFkZXIgLz5cbiAgICAgICAgPE1haW4gLz5cbiAgICAgICAgPEFib3V0IC8+XG4gICAgICAgIDxTZXJ2aWNlcyAvPlxuICAgICAgICA8UmV2aWV3cyAvPlxuICAgICAgICA8Q29udGFjdCAvPlxuICAgICAgICA8Rm9vdGVyIC8+XG4gICAgPC9QYWdlPlxuKTtcblxuZXhwb3J0IGRlZmF1bHQgSW5kZXg7XG4iXX0= */\n/*@ sourceURL=/Users/jeffersonmourak/projects/joana/pages/index.js */"));
+  }, "body{margin:0;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9qZWZmZXJzb25tb3VyYWsvcHJvamVjdHMvam9hbmEvcGFnZXMvaW5kZXguanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBMENhLEFBRzhCLFNBQ2IiLCJmaWxlIjoiL1VzZXJzL2plZmZlcnNvbm1vdXJhay9wcm9qZWN0cy9qb2FuYS9wYWdlcy9pbmRleC5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCBmcm9tICdyZWFjdCc7XG5pbXBvcnQgSGVhZCBmcm9tICduZXh0L2hlYWQnO1xuaW1wb3J0IHN0eWxlZCBmcm9tICdzdHlsZWQtY29tcG9uZW50cyc7XG5cbmltcG9ydCBIZWFkZXIgZnJvbSAnLi4vY29tcG9uZW50cy9zaGFyZWQvSGVhZGVyJztcbmltcG9ydCBNYWluIGZyb20gJy4uL2NvbXBvbmVudHMvUGFnZXMvaW5kZXgvTWFpbic7XG5pbXBvcnQgQWJvdXQgZnJvbSAnLi4vY29tcG9uZW50cy9QYWdlcy9pbmRleC9BYm91dCc7XG5pbXBvcnQgU2VydmljZXMgZnJvbSAnLi4vY29tcG9uZW50cy9QYWdlcy9pbmRleC9TZXJ2aWNlcyc7XG5pbXBvcnQgUmV2aWV3cyBmcm9tICcuLi9jb21wb25lbnRzL1BhZ2VzL2luZGV4L1Jldmlld3MnO1xuaW1wb3J0IENvbnRhY3QgZnJvbSAnLi4vY29tcG9uZW50cy9QYWdlcy9pbmRleC9Db250YWN0JztcbmltcG9ydCBGb290ZXIgZnJvbSAnLi4vY29tcG9uZW50cy9zaGFyZWQvRm9vdGVyJztcblxuaW1wb3J0IE1FVEEgZnJvbSAnLi4vZGF0YS9tZXRhLmpzb24nO1xuaW1wb3J0IHNlcnZpY2VzIGZyb20gJy4uL2RhdGEvc2VydmljZXMuanNvbic7XG5pbXBvcnQga2V5IGZyb20gJy4uL2NvbnN0YW50cy9rZXknO1xuXG5jb25zdCBQYWdlID0gc3R5bGVkLmRpdmBcbiAgICBtYXJnaW4tdG9wOiAxMDBweDtcbmA7XG5cbi8qKlxuICogQnVpbGQgbWV0YS5cbiAqL1xuY29uc3QgYnVpbGRNZXRhID0gKCkgPT4gTUVUQS5tYXAoKHsgbmFtZSwgY29udGVudCB9KSA9PiAoXG4gICAgPG1ldGEga2V5PXtrZXkoKX0gbmFtZT17bmFtZX0gY29udGVudD17Y29udGVudH0gLz5cbikpO1xuXG4vKipcbiAqIFBhZ2UgY29uZmlndXJhdGlvbi5cbiAqL1xuY29uc3QgUGFnZUNvbmZpZyA9ICgpID0+IChcbiAgICA8UmVhY3QuRnJhZ21lbnQ+XG4gICAgICAgIDxIZWFkPlxuICAgICAgICAgICAgPG1ldGEgbmFtZT1cInZpZXdwb3J0XCIgY29udGVudD1cIndpZHRoPWRldmljZS13aWR0aCwgaW5pdGlhbC1zY2FsZT0xXCIgLz5cbiAgICAgICAgICAgIDxtZXRhIGNoYXJTZXQ9XCJ1dGYtOFwiIC8+XG4gICAgICAgICAgICA8bWV0YSBodHRwRXF1aXY9XCJDb250ZW50LVR5cGVcIiBjb250ZW50PVwidGV4dC9odG1sOyBjaGFyc2V0PXV0Zi04XCIgLz5cbiAgICAgICAgICAgIDxsaW5rIHJlbD1cInN0eWxlc2hlZXRcIiBocmVmPVwiaHR0cHM6Ly91c2UudHlwZWtpdC5uZXQveHdzM2J1dC5jc3NcIiAvPlxuICAgICAgICAgICAgeyBidWlsZE1ldGEoKSB9XG4gICAgICAgICAgICA8dGl0bGU+IEFscGhhIEN1c3RvbSA8L3RpdGxlPlxuXG4gICAgICAgIDwvSGVhZD5cbiAgICAgICAgPHN0eWxlIGpzeCBnbG9iYWw+XG4gICAgICAgICAgICB7YFxuICAgICAgICAgICAgICAgIGJvZHkge1xuICAgICAgICAgICAgICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgYH1cbiAgICAgICAgPC9zdHlsZT5cbiAgICA8L1JlYWN0LkZyYWdtZW50PlxuKTtcblxuLyoqXG4gKiBJbmRleCBwYWdlLlxuICovXG5jb25zdCBJbmRleCA9ICgpID0+IChcbiAgICA8UGFnZT5cbiAgICAgICAgPFBhZ2VDb25maWcgLz5cbiAgICAgICAgPEhlYWRlciAvPlxuICAgICAgICA8TWFpbiAvPlxuICAgICAgICA8QWJvdXQgLz5cbiAgICAgICAgPFNlcnZpY2VzIC8+XG4gICAgICAgIDxSZXZpZXdzIC8+XG4gICAgICAgIDxDb250YWN0IC8+XG4gICAgICAgIDxGb290ZXIgLz5cbiAgICA8L1BhZ2U+XG4pO1xuXG5leHBvcnQgZGVmYXVsdCBJbmRleDtcbiJdfQ== */\n/*@ sourceURL=/Users/jeffersonmourak/projects/joana/pages/index.js */"));
 };
 /**
  * Index page.
@@ -15591,55 +15731,55 @@ var Index = function Index() {
   return __jsx(Page, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 56
     },
     __self: this
   }, __jsx(PageConfig, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 57
     },
     __self: this
   }), __jsx(_components_shared_Header__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 58
     },
     __self: this
   }), __jsx(_components_Pages_index_Main__WEBPACK_IMPORTED_MODULE_5__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
+      lineNumber: 59
     },
     __self: this
   }), __jsx(_components_Pages_index_About__WEBPACK_IMPORTED_MODULE_6__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59
+      lineNumber: 60
     },
     __self: this
   }), __jsx(_components_Pages_index_Services__WEBPACK_IMPORTED_MODULE_7__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60
+      lineNumber: 61
     },
     __self: this
   }), __jsx(_components_Pages_index_Reviews__WEBPACK_IMPORTED_MODULE_8__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61
+      lineNumber: 62
     },
     __self: this
   }), __jsx(_components_Pages_index_Contact__WEBPACK_IMPORTED_MODULE_9__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62
+      lineNumber: 63
     },
     __self: this
   }), __jsx(_components_shared_Footer__WEBPACK_IMPORTED_MODULE_10__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63
+      lineNumber: 64
     },
     __self: this
   }));

@@ -4,8 +4,8 @@ import Section from '../../shared/Section';
 
 const Image = styled.div`
     width: 100%;
-    height: 75vh;
-    background-image: url(/static/image.jpg);
+    height: 85vh;
+    background-image: url(/static/pictures/cover_1.JPG);
     background-size: cover;
     background-position: center center;
 `;
