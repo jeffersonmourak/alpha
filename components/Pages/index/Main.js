@@ -5,7 +5,7 @@ import Section from '../../shared/Section';
 const Image = styled.div`
     width: 100%;
     height: 85vh;
-    background-image: url(/static/pictures/cover_1.JPG);
+    background-image: url(/static/pictures/cover_1.jpg);
     background-size: cover;
     background-position: center center;
 `;

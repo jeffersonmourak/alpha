@@ -1,50 +1,26 @@
 [
     {
-        "name": "Abby",
-        "rating": 1,
-        "text": "Great work, my house looks amazing now",
-        "location": "Boston, MA"
-    },
-    {
-        "name": "Jacoby",
-        "rating": 2,
-        "text": "ANOTHER TEXT HERE",
-        "location": "Other, MA"
-    },
-    {
-        "name": "Brylee",
-        "rating": 3,
-        "text": "ANY OTHER TEXT",
-        "location": "Hyannis, MA"
-    },
-    {
-        "name": "Madison",
-        "rating": 4,
-        "text": "JUST TO TEST",
-        "location": "City, MA"
-    },
-    {
-        "name": "Anna",
+        "name": "Robert",
         "rating": 5,
-        "text": "Great",
-        "location": "somewhere, MA"
+        "text": "My house looks like brand new after the renovation, Alpha has the best professionals on the market.",
+        "location": "Sandwich, MA"
     },
     {
-        "name": "Nadya",
-        "rating": 4,
-        "text": "Oops.",
-        "location": "over, MA"
+        "name": "Bob",
+        "rating": 5,
+        "text": "I can't believe how my house is now, thanks Rudy for this amazing job.",
+        "location": "Osterville, MA"
     },
     {
-        "name": "Valery",
-        "rating": 3,
-        "text": "NOW",
-        "location": "the, MA"
+        "name": "Jonathan",
+        "rating": 5,
+        "text": "My Deck is amazing, Alpha did the fastest job and professional job I ever saw.",
+        "location": "Falmouth, MA"
     },
     {
-        "name": "Dru",
-        "rating": 2,
-        "text": "Amazing",
-        "location": "rainbow, MA"
+        "name": "Paul",
+        "rating": 5,
+        "text": "The painting job that Alpha did, is lasting for a long time.",
+        "location": "Chatham, MA"
     }
 ]
